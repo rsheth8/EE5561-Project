@@ -14,6 +14,13 @@ REPO = Path(__file__).resolve().parent.parent
 TOL = 1e-4
 
 
+def rel(p: Path) -> str:
+    try:
+        return str(p.relative_to(REPO))
+    except ValueError:
+        return str(p)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("a")
@@ -32,7 +39,7 @@ def main():
         identical[sid] = bool(np.array_equal(xa, xb))
     res = {
         "checkpoint": f"{sa['run_dir']}/checkpoints/step_{sa['step']:06d}.pt",
-        "eval_run_a": str(A.relative_to(REPO)), "eval_run_b": str(B.relative_to(REPO)),
+        "eval_run_a": rel(A), "eval_run_b": rel(B),
         "max_abs_diff_vs_training_log_a": ma["max_abs_diff_vs_training_val_log"],
         "max_abs_diff_vs_training_log_b": mb["max_abs_diff_vs_training_val_log"],
         "outputs_bit_identical_a_vs_b": identical,

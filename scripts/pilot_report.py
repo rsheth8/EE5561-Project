@@ -22,6 +22,13 @@ from hdr.display import DISPLAY_MAPPING, to_uint8, write_sidecar  # noqa: E402
 from hdr.metrics import METRIC_KEYS  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
+
+
+def rel(p) -> str:
+    try:
+        return str(Path(p).resolve().relative_to(REPO))
+    except ValueError:
+        return str(p)
 FIG = REPO / "results" / "figures"
 TAB = REPO / "results" / "tables"
 
@@ -74,7 +81,7 @@ def main():
     write_sidecar(fp, [
         f"M0 pilot ({status}), single seed 5561, batch 8, lr 1e-4, fp32; val = 5 validation scenes, full image, mu=5000.",
         "Left: training loss logged every 10 updates (mean of those 10) and its 50-point moving average. Right: mean val PSNR-mu every 2000 updates; C0/C3 levels from the classical run.",
-        f"Selected step {sel_step} = best val PSNR-mu (val-selected). Sources: {pilot.relative_to(REPO)}/train_log.csv, val_log.csv; {cl.relative_to(REPO)}/metrics.csv.",
+        f"Selected step {sel_step} = best val PSNR-mu (val-selected). Sources: {rel(pilot)}/train_log.csv, val_log.csv; {rel(cl)}/metrics.csv.",
     ])
 
     # val comparison table
@@ -87,8 +94,8 @@ def main():
     tab["so"] = tab.scene.map(lambda s: "zzz" if s == "mean" else s)
     tab = tab.sort_values(["so", "o"]).drop(columns=["o", "so"])
     with (TAB / "val_comparison.csv").open("w") as fh:
-        fh.write(f"# 5 validation scenes, full image, no border excluded, mu = 5000; C0-C3 from {cl.relative_to(REPO)}; "
-                 f"M0 = pilot, val-selected step {sel_step}, from {ev.relative_to(REPO)} (single seed)\n")
+        fh.write(f"# 5 validation scenes, full image, no border excluded, mu = 5000; C0-C3 from {rel(cl)}; "
+                 f"M0 = pilot, val-selected step {sel_step}, from {rel(ev)} (single seed)\n")
         tab.to_csv(fh, index=False)
 
     # figure: same scene/crop as ladder

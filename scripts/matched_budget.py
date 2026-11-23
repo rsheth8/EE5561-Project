@@ -21,6 +21,13 @@ from hdr.evaluate import resolve_run  # noqa: E402
 from hdr.metrics import METRIC_KEYS  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
+
+
+def rel(p) -> str:
+    try:
+        return str(Path(p).resolve().relative_to(REPO))
+    except ValueError:
+        return str(p)
 VARIANTS = ["M0", "M1", "M2", "M3"]
 LABEL = "preliminary, single seed, 5 validation scenes"
 
@@ -46,7 +53,7 @@ def select():
     nstar = max(common) if common else None
     info = {"N_star": nstar, "eval_steps_reached": {v: sorted(int(s) for s in st) for v, st in steps.items()},
             "max_step_reached": {v: int(max(st)) for v, st in steps.items()}, "missing": missing,
-            "run_dirs": {v: str(rd.relative_to(REPO)) for v, (rd, vl, e) in logs.items() if rd is not None}}
+            "run_dirs": {v: str(rel(rd)) for v, (rd, vl, e) in logs.items() if rd is not None}}
     entries = []
     if nstar is not None:
         for v in VARIANTS:
@@ -66,7 +73,7 @@ def table(eval_run: str):
     sel = {k: v["step"] for k, v in mj["selection"].items()}
     m = m.rename(columns={"name": "model"})[["scene", "model", "step"] + METRIC_KEYS]
     hdr = (f"# {LABEL}; full image, mu = 5000; matched-budget rule N* = {nstar} (largest eval step all four variants reached); "
-           f"each variant's checkpoint = best val PSNR-mu among steps <= N*: {sel}; source run {ev.relative_to(REPO)}\n")
+           f"each variant's checkpoint = best val PSNR-mu among steps <= N*: {sel}; source run {rel(ev)}\n")
     with (REPO / "results" / "tables" / "variants_val.csv").open("w") as fh:
         fh.write(hdr)
         m.sort_values(["scene", "model"]).to_csv(fh, index=False)
@@ -99,7 +106,7 @@ def table(eval_run: str):
     fig.savefig(fp, dpi=100)
     plt.close(fig)
     write_sidecar(fp, [f"Validation PSNR-mu (5 val scenes, full image, mu=5000) vs updates for M0-M3; {LABEL}.",
-                       f"Matched-budget N* = {nstar}; selected steps {sel}. Sources: runs/pilot_M*/<ts>/val_log.csv, {ev.relative_to(REPO)}."])
+                       f"Matched-budget N* = {nstar}; selected steps {sel}. Sources: runs/pilot_M*/<ts>/val_log.csv, {rel(ev)}."])
     print(m[m.scene == "mean"].to_string())
     print(dd[dd.scene == "mean"].to_string())
 

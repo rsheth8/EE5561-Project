@@ -142,7 +142,7 @@ def main():
         pp = c6[c6.scene == "pooled"]
         key = "; ".join(f"{r.frame}/{r.stratum}: err cons {r.mean_err_consistent:.4f} vs incons {r.mean_err_inconsistent:.4f}, AUROC {f(r.auroc_1_minus_r)} (n={r.n_pix})"
                         for r in pp.itertuples())
-        rows.append(("6a/6b Cues", "done", rel(latest("cues-v1")), key, "estimated cues; see fig_reliability_maps.txt for a cue failure"))
+        rows.append(("6a/6b Cues", "done", rel(latest("cues-v1", "metrics.csv")), key, "estimated cues; see fig_reliability_maps.txt for a cue failure"))
     else:
         rows.append(("6a/6b Cues", "not started", "-", "-", "-"))
 
