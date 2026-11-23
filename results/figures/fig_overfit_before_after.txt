@@ -1,0 +1,5 @@
+overfit check (M0), 3000 updates on one fixed batch of 4 crops; not a generalization result
+Crops shown: crop 0 scene 001 y=725 x=417; crop 1 scene 059 y=266 x=566.
+Inputs: LDR shown as stored (normalised by dtype max, x255, rounded). Outputs and GT: to_uint8(H) = round(255*T(clip(H,0,1))), T = mu-law, mu=5000.
+Per-crop final PSNR-mu [40.6, 42.96, 45.38, 44.88], C0 [32.42, 47.01, 38.96, 29.47].
+Source run: runs/overfit_M0/20261123-145303

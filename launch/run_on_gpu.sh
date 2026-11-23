@@ -21,6 +21,6 @@ GRES="${GRES:-gpu:a100:1}"
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
 mkdir -p "$(dirname "$LOG")"
 CMD="$(printf '%q ' "$@")"
-sbatch -A "$ACCOUNT" -p "$PARTITION" -N 1 -n 1 -c 8 --mem=96G --gres="$GRES" \
+sbatch ${DEPEND:+--dependency=$DEPEND} -A "$ACCOUNT" -p "$PARTITION" -N 1 -n 1 -c 8 --mem=96G --gres="$GRES" \
   -t "$(printf '%02d:00:00' "$HOURS")" -J "hdr-$ROLE" -o "$LOG" --open-mode=append \
   --wrap "cd $REPO && echo \"[\$(date)] role=$ROLE job=\$SLURM_JOB_ID node=\$(hostname) CVD=\$CUDA_VISIBLE_DEVICES\" && nvidia-smi --query-gpu=index,name,uuid,memory.used,utilization.gpu --format=csv && export HDR_ROLE=$ROLE && $CMD"

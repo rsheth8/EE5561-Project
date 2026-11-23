@@ -1,0 +1,13 @@
+40e3ee58446e84c68925189b43dfda17383dd0de
+DIRTY
+
+untracked/modified:
+?? results/figures/fig_overfit_before_after.png
+?? results/figures/fig_overfit_before_after.txt
+?? results/figures/fig_overfit_curve.png
+?? results/figures/fig_overfit_curve.txt
+?? runs/overfit_M3/
+?? runs/pilot_M0/
+?? scripts/matched_budget.py
+?? scripts/pilot_report.py
+?? scripts/repro_check.py

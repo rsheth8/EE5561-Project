@@ -1,0 +1,38 @@
+{
+  "seed": 5561,
+  "lr": 0.0001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "batch": 4,
+  "crop": 256,
+  "augment": false,
+  "n_updates": 3000,
+  "eval_every": 2000,
+  "log_every": 10,
+  "val_scenes": "val",
+  "split": "configs/split.json",
+  "exp": "overfit_M3",
+  "variant": "M3",
+  "overfit": {
+    "n_crops": 4,
+    "psnr_every": 250,
+    "crops_file": "configs/overfit_crops.json"
+  },
+  "config_file": "configs/overfit_M3.json",
+  "_gpu": {
+    "CUDA_VISIBLE_DEVICES": "0",
+    "SLURM_JOB_ID": "7913899",
+    "SLURM_JOB_PARTITION": "a100-4",
+    "SLURM_STEP_GPUS": "3",
+    "host": "aga06",
+    "nvidia_smi_visible": "0, NVIDIA A100-SXM4-40GB, GPU-a5f4fc7c-f13b-2b38-50d8-a91affa9a496, 00000000:06:00.0, 40960 MiB"
+  },
+  "_argv": [
+    "/users/8/zha00175/ee5561-hdr/hdr/train.py",
+    "--config",
+    "configs/overfit_M3.json"
+  ],
+  "_started": "2026-11-23T15:15:40"
+}
