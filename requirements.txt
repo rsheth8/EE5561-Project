@@ -44,6 +44,7 @@ scikit-learn==1.9.1
 scipy==1.17.1
 setuptools==78.1.0
 sympy==1.14.0
+tabulate==0.10.0
 threadpoolctl==3.8.0
 tifffile==2026.3.3
 torch==2.7.1+cu126

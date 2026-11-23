@@ -1,0 +1,23 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.13, pytest-9.2.0, pluggy-1.7.0 -- /users/8/zha00175/ee5561-hdr/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /users/8/zha00175/ee5561-hdr
+collecting ... collected 15 items
+
+tests/test_data.py::test_pairing_scene001 PASSED                         [  6%]
+tests/test_data.py::test_cache_features_equal_raw[001] PASSED            [ 13%]
+tests/test_data.py::test_cache_features_equal_raw[036] PASSED            [ 20%]
+tests/test_data.py::test_metrics_basic PASSED                            [ 26%]
+tests/test_data.py::test_split_frozen PASSED                             [ 33%]
+tests/test_gate.py::test_m0_shapes_and_params PASSED                     [ 40%]
+tests/test_gate.py::test_gate_shapes_zero_where_invalid_and_init PASSED  [ 46%]
+tests/test_gate.py::test_gate_zero_after_training_step_where_invalid PASSED [ 53%]
+tests/test_gate.py::test_m2_m3_same_params PASSED                        [ 60%]
+tests/test_gate.py::test_m2_ignores_cue_values PASSED                    [ 66%]
+tests/test_gate.py::test_finite_with_zero_nonref PASSED                  [ 73%]
+tests/test_radiometry.py::test_recovers_below_clip_and_fails_above PASSED [ 80%]
+tests/test_warp.py::test_zero_flow_identity PASSED                       [ 86%]
+tests/test_warp.py::test_translation PASSED                              [ 93%]
+tests/test_warp.py::test_fb_identity PASSED                              [100%]
+
+======================== 15 passed in 155.59s (0:02:35) ========================

@@ -1,0 +1,18 @@
+f4318ae3f95f0336c7d01b5d74375b4cd2905fae
+DIRTY
+requirements.txt                            |   1 +
+ runs/pilot_M0/20261123-150849/train_log.csv | 129 ++++++++++++++++++++++++++++
+ 2 files changed, 130 insertions(+)
+untracked/modified:
+M requirements.txt
+ M runs/pilot_M0/20261123-150849/train_log.csv
+?? results/tables/pytest.txt
+?? runs/overfit_M3/20261123-151540/FINISHED
+?? runs/overfit_M3/20261123-151540/metrics.json
+?? runs/overfit_M3/20261123-151540/notes.md
+?? runs/overfit_M3/20261123-151540/psnr_log.csv
+?? runs/overfit_M3/20261123-151540/train_log.csv
+?? runs/pilot_M0/20261123-150849/val_log.csv
+?? runs/pilot_M0/20261123-150849/wall_time.json
+?? runs/pilot_M1/
+?? scripts/make_results.py
