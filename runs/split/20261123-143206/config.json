@@ -1,0 +1,21 @@
+{
+  "seed": 5561,
+  "ncc_threshold": 0.9,
+  "n_val": 5,
+  "thumb_hw": [
+    48,
+    72
+  ],
+  "_gpu": {
+    "CUDA_VISIBLE_DEVICES": null,
+    "SLURM_JOB_ID": "7911654",
+    "SLURM_JOB_PARTITION": "msilarge",
+    "SLURM_STEP_GPUS": null,
+    "host": "acn209",
+    "nvidia_smi_visible": "<failed: [Errno 2] No such file or directory: 'nvidia-smi'>"
+  },
+  "_argv": [
+    "/users/8/zha00175/ee5561-hdr/hdr/split.py"
+  ],
+  "_started": "2026-11-23T14:32:06"
+}

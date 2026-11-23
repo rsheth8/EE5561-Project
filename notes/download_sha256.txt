@@ -1,0 +1,1 @@
+5afa13191303961ac40c14f876dbc1b165fdeaf7d2cbd221a99ffdb265d315fc  downloads/SIGGRAPH17_HDR_Trainingset.zip

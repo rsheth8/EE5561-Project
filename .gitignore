@@ -1,0 +1,11 @@
+downloads/
+raw/
+cache/
+.venv/
+__pycache__/
+*.pyc
+runs/**/checkpoints/
+runs/**/outputs/
+*.npz
+slurm-*.out
+logs/*.out

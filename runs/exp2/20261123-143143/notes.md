@@ -1,0 +1,7 @@
+- 74 scenes found; pairing ok for 74
+- dtypes {'uint16': 74}; shapes {'1000x1500x3': 74}
+- best-fitting reference index counts {2: 73, 3: 1}
+- median of per-scene median rel. err: {'k1': 0.16127817575581876, 'k2': 0.018504447082611387, 'k3': 0.41175526721240685}
+- s_2 median 1.0154 (range 0.9982-1.0696); nothing rescaled
+- anomalies: {'009': 'best_k_3'}
+- tables: results/tables/dataset_inventory.csv, results/tables/ref_scale_diag.csv; cache written to cache/
