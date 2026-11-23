@@ -1,0 +1,19 @@
+{
+  "n_scenes": 74,
+  "workers": 24,
+  "method": "DIS PRESET_MEDIUM, fb alpha 0.01 beta 0.5",
+  "_gpu": {
+    "CUDA_VISIBLE_DEVICES": null,
+    "SLURM_JOB_ID": "7911919",
+    "SLURM_JOB_PARTITION": "msilarge",
+    "SLURM_STEP_GPUS": null,
+    "host": "n63",
+    "nvidia_smi_visible": "<failed: [Errno 2] No such file or directory: 'nvidia-smi'>"
+  },
+  "_argv": [
+    "scripts/precompute_flow.py",
+    "--workers",
+    "24"
+  ],
+  "_started": "2026-11-23T14:37:42"
+}

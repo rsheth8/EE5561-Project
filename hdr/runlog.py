@@ -71,7 +71,7 @@ def timestamp() -> str:
 
 def make_run_dir(base: str | os.PathLike, config: dict, run_dir: str | os.PathLike | None = None) -> Path:
     """Create <base>/<timestamp>/ (or use run_dir) and write config/git/env files."""
-    rd = Path(run_dir) if run_dir else Path(base) / timestamp()
+    rd = (Path(run_dir) if run_dir else Path(base) / timestamp()).resolve()
     rd.mkdir(parents=True, exist_ok=True)
     (rd / "figures").mkdir(exist_ok=True)
     cfg = dict(config)
@@ -90,3 +90,25 @@ def write_notes(rd: str | os.PathLike, lines: list[str]) -> None:
 
 def load_json(path) -> dict:
     return json.loads(Path(path).read_text())
+
+
+STORE = Path(os.environ.get("HDR_STORE", "/projects/standard/ee5561/shared/zha00175_hdr"))
+
+
+def big_dir(rd: Path, name: str) -> Path:
+    """<rd>/<name> as a symlink into project space (home quota is tight); plain dir otherwise."""
+    rd = Path(rd).resolve()
+    d = rd / name
+    if d.exists():
+        return d
+    if STORE.exists():
+        try:
+            rel = rd.relative_to(REPO / "runs")
+        except ValueError:
+            rel = Path(rd.name)
+        real = STORE / name / rel
+        real.mkdir(parents=True, exist_ok=True)
+        d.symlink_to(real)
+    else:
+        d.mkdir(parents=True)
+    return d

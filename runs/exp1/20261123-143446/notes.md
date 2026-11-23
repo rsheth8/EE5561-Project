@@ -1,0 +1,5 @@
+- Synthetic random tensors - environment check only, not an HDR result.
+- GPU NVIDIA A100-SXM4-40GB (42.4 GB) uuid GPU-1344942d-e2e5-06ed-16d9-dd9d5f2fd8ed on aga21, Slurm job 7911790
+- M0 params 1441283; train batch [8,3,6,256,256] fp32 (TF32 off): 2.352 it/s, peak 12.81 GB
+- asserts passed: loss finite all 50 iters, parameters changed after step 1
+- full-res no-grad forward [1,3,6,1000,1500]: 0.272 s, peak 5.94 GB

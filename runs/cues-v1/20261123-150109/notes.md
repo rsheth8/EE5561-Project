@@ -1,0 +1,11 @@
+- 6b on 5 val scenes; pixels v=1 & q^w>0.2; large err > 0.05
+- L1 all: n=5253541, incons 0.166, err cons 0.0095 vs incons 0.0110, AUROC(1-r) 0.613
+- L1 ref_clipped: n=659941, incons 0.339, err cons 0.0064 vs incons 0.0061, AUROC(1-r) 0.441
+- L1 ref_unclipped: n=4593600, incons 0.141, err cons 0.0098 vs incons 0.0127, AUROC(1-r) 0.642
+- L3 all: n=4728323, incons 0.100, err cons 0.0100 vs incons 0.0308, AUROC(1-r) 0.731
+- L3 ref_clipped: n=543, incons 0.576, err cons 0.2489 vs incons 0.2946, AUROC(1-r) 0.878
+- L3 ref_unclipped: n=4727780, incons 0.100, err cons 0.0100 vs incons 0.0306, AUROC(1-r) 0.730
+- scene 062, L_1: lime box y=370 x=544 96x96 holds the densest 'consistent but wrong' pixels (FB-consistent, valid, m(L_2)>0.95, err>0.05): 0.3% of the box; 68 such pixels in the frame
+- scene 062, L_3: lime box y=577 x=644 96x96 holds the densest 'consistent but wrong' pixels (FB-consistent, valid, m(L_2)>0.95, err>0.05): 80.9% of the box; 32555 such pixels in the frame
+- scene 025, L_1: lime box y=298 x=330 96x96 holds the densest 'consistent but wrong' pixels (FB-consistent, valid, m(L_2)>0.95, err>0.05): 4.0% of the box; 1143 such pixels in the frame
+- scene 025, L_3: lime box y=281 x=1043 96x96 holds the densest 'consistent but wrong' pixels (FB-consistent, valid, m(L_2)>0.95, err>0.05): 100.0% of the box; 87964 such pixels in the frame

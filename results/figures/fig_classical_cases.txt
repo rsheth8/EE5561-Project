@@ -1,0 +1,4 @@
+Good case: val scene 062 (highest C3 PSNR-mu 41.466 dB), crop y=258, x=896, 300x300 (its largest-C3-error window). Scene 062 C3 residual error is small and concentrated on thin foliage edges.
+Failure: val scene 025, crop y=359, x=367, 300x300 = the window with the largest mean |T(C3)-T(GT)| over all 5 val scenes (0.0162).
+Failure classification: ghost (left: building pattern from a misaligned non-reference frame) + alignment artifact (moving hand: colour noise). Left region: ~50% of pixels have m(L_2)>0.95, so the reference cannot veto the samples (C2/C3 rule) and 82-98% of them are FB-inconsistent; hand: reference unclipped (mean m(L_2)=0.36) but 15% (L_1) / 30% (L_3) FB-inconsistent warped samples pass the 0.25 disagreement test.
+Display: to_uint8(H) = round(255*T(clip(H,0,1))), T = mu-law, mu=5000; error maps shared scale 0..0.3. Classical methods, no training.

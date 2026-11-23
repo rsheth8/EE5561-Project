@@ -1,0 +1,10 @@
+{
+  "split": "configs/split.json",
+  "scenes": "val",
+  "ref_lo": 0.1,
+  "ref_hi": 0.9,
+  "disagree_thr": 0.25,
+  "eps_weight": 1e-3,
+  "hat": "w(z) = 1 - |2z - 1| per channel",
+  "gamma": 2.2
+}

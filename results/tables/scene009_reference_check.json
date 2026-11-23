@@ -1,0 +1,22 @@
+{
+ "L2_009_eq_L2_010": true,
+ "Hgt_009_eq_Hgt_010": true,
+ "tifs_009": [
+  "262A1163.tif",
+  "262A1164.tif",
+  "262A1165.tif"
+ ],
+ "tifs_010": [
+  "262A1170.tif",
+  "262A1171.tif",
+  "262A1172.tif"
+ ],
+ "L1_eq": false,
+ "L3_eq": false,
+ "k1_logradient_corr": 0.8461080948803344,
+ "k1_medrelerr_brightpix(H>0.02)": 0.05295799468342311,
+ "k2_logradient_corr": 0.980900005658448,
+ "k2_medrelerr_brightpix(H>0.02)": 0.041999096136406004,
+ "k3_logradient_corr": 0.7670921009710161,
+ "k3_medrelerr_brightpix(H>0.02)": 0.03721478868531148
+}

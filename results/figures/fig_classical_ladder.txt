@@ -1,0 +1,4 @@
+Validation scene 062 (largest mean|T(C1)-T(GT)| among the 5 val scenes: 025=0.0366, 045=0.0383, 051=0.0378, 056=0.0444, 062=0.0516).
+Top row full frame with crop box; bottom row crop y=640, x=557, size 300x300 (window with largest mean C1 error).
+Methods: C0 reference only; C1 hat-weighted merge (no alignment); C2 reference-fallback deghosting; C3 C2 on DIS-aligned frames. Not learned; no training.
+Display: to_uint8(H) = round(255*T(clip(H,0,1))), T = mu-law, mu=5000, same mapping for every panel. PSNR-mu in titles from runs/classical-v1/20261123-145641/metrics.csv.

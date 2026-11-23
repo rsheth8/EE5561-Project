@@ -1,0 +1,3 @@
+Scene 027; full frames, no crop; data inspection, no method.
+LDR: LDR shown as stored (normalised by dtype max, x255, rounded). H_gt: to_uint8(H) = round(255*T(clip(H,0,1))), T = mu-law, mu=5000.
+Selected because: largest saturated fraction: 36.14% of pixels with m(L_2)>0.95 (dataset_inventory.csv)

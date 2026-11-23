@@ -1,0 +1,30 @@
+{
+  "q_min": 0.2,
+  "err_large": 0.05,
+  "ref_clip": 0.95,
+  "fig_scenes": [
+    "062",
+    "025"
+  ],
+  "val": [
+    "025",
+    "045",
+    "051",
+    "056",
+    "062"
+  ],
+  "_gpu": {
+    "CUDA_VISIBLE_DEVICES": null,
+    "SLURM_JOB_ID": null,
+    "SLURM_JOB_PARTITION": null,
+    "SLURM_STEP_GPUS": null,
+    "host": "ahl03",
+    "nvidia_smi_visible": "<failed: [Errno 2] No such file or directory: 'nvidia-smi'>"
+  },
+  "_argv": [
+    "/users/8/zha00175/ee5561-hdr/hdr/diagnostics.py",
+    "--out",
+    "runs/cues-v1"
+  ],
+  "_started": "2026-11-23T15:01:09"
+}

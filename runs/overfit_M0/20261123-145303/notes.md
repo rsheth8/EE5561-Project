@@ -1,0 +1,6 @@
+- overfit check (M0), not a generalization result; 4 fixed crops, batch 4, no augmentation
+- crops: [{'scene': '001', 'y': 725, 'x': 417, 'size': 256}, {'scene': '059', 'y': 266, 'x': 566, 'size': 256}, {'scene': '061', 'y': 554, 'x': 425, 'size': 256}, {'scene': '072', 'y': 509, 'x': 485, 'size': 256}]
+- 3000 updates, lr 0.0001, fp32 (TF32 off); params 1441283
+- loss 0.33906 -> 0.00472
+- PSNR-mu on crops: step0 8.858 -> final 43.453 dB; C0 36.965 dB; margin 6.488 dB; pass(>=5 dB) True
+- wall 661 s

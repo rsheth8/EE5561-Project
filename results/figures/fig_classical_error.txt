@@ -1,0 +1,3 @@
+Validation scene 062; error = channel mean of |T(H) - T(H_gt)|, T = mu-law (mu=5000) on clip(H,0,1).
+Shared colour scale 0..0.3 (inferno) for all panels; crop y=640, x=557, 300x300.
+Methods C0-C3 as in fig_classical_ladder; classical, no training.

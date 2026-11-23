@@ -1,0 +1,4 @@
+- scene 036 files ['262A1227.tif', '262A1228.tif', '262A1229.tif'] dtype uint16
+- e [0.0, 2.0, 4.0] t [1.0, 4.0, 16.0] pairing_ok True
+- H_gt min 0.0006561 max 1 finite True
+- selected because: visibly large motion chosen by eye: subject shifted left in L_1, hands/box position differ across L_1-L_3; median DIS flow 30-39 px (runs/flow metrics.csv)

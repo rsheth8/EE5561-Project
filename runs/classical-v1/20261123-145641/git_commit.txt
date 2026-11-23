@@ -1,0 +1,31 @@
+8833bc1a8e45eac0177a0fc1a966696391e11130
+DIRTY
+hdr/runlog.py                      | 24 +++++++++++++++++++++++-
+ runs/exp2/20261123-143143/notes.md |  2 ++
+ 2 files changed, 25 insertions(+), 1 deletion(-)
+untracked/modified:
+M hdr/runlog.py
+ M runs/exp2/20261123-143143/notes.md
+?? cache
+?? configs/classical.json
+?? configs/overfit_M0.json
+?? configs/overfit_M3.json
+?? configs/overfit_crops.json
+?? downloads
+?? hdr/classical.py
+?? hdr/train.py
+?? raw
+?? results/figures/fig_saturation_mask.png
+?? results/figures/fig_saturation_mask.txt
+?? results/tables/classical_val.csv
+?? results/tables/platform.csv
+?? results/tables/scene009_reference_check.json
+?? runs/classical-v1/
+?? runs/data-check/
+?? runs/exp1/
+?? runs/flow/
+?? runs/overfit_M0/
+?? scripts/fig_saturation.py
+?? scripts/precompute_flow.py
+?? tests/test_data.py
+?? tests/test_radiometry.py

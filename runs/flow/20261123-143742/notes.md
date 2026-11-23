@@ -1,0 +1,4 @@
+- 74 scenes aligned at full res; wall 8 s with 24 workers
+- per-scene align time mean 1.79 s, max 2.30 s (single thread)
+- per-scene runtime and valid/inconsistent fractions in metrics.csv
+- outputs: cache/flow/<scene>.npz
