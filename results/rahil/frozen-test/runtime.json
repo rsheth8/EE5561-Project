@@ -1,0 +1,14 @@
+{
+  "python": "3.11.13",
+  "torch": "2.7.1+cu118",
+  "cuda_runtime": "11.8",
+  "opencv": "4.10.0",
+  "numpy": "1.26.4",
+  "skimage": "0.24.0",
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "slurm_job_id": "7976815",
+  "protocol_sha256": "73488cf9cb8a8d667e1689287f251bf6923550540373b6b771fd4e4f948521a2",
+  "input_manifest_sha256": "31965bc508918afb6362ccd03583f3517619615363f4102a25b1cc6a0b4803e9",
+  "model_selection": "Frozen before test evaluation; no optimizer constructed",
+  "flow_version_limit": "Alignment implementation is frozen. OpenCV version is recorded; compare it with training environment before claiming exact cross-environment replication."
+}

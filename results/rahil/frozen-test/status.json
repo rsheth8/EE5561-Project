@@ -1,0 +1,7 @@
+{
+  "status": "complete",
+  "completed_scenes": 15,
+  "method_scene_pairs": 120,
+  "elapsed_seconds": 271.3648691177368,
+  "claim_scope": "frozen within-dataset holdout; one seed; no cross-dataset robustness claim"
+}

@@ -1,0 +1,195 @@
+{
+  "status": "completed",
+  "analysis_status": "Exploratory validation analysis, not independent test evidence",
+  "scenes": [
+    "025",
+    "045",
+    "051",
+    "056",
+    "062"
+  ],
+  "frozen_validation_ids": [
+    "025",
+    "045",
+    "051",
+    "056",
+    "062"
+  ],
+  "gamma": 2.2,
+  "mu": 5000.0,
+  "fallback_threshold": 0.2,
+  "reference_brightness_bounds": [
+    0.05,
+    0.95
+  ],
+  "regions": {
+    "reference_usable": "every RGB channel strictly between .05 and .95",
+    "reference_bright_or_clipped": "any RGB channel >= .95; a brightness proxy, not verified scene-radiance clipping",
+    "reference_dark_only": "not bright, but any RGB channel <= .05"
+  },
+  "summary_rule": "Equal scene means among nonempty regions; empty regions are blank and omitted, never treated as zero error.",
+  "region_metrics": "RGB mu-law MAE and PSNR; SSIM only on full images to avoid cross-region window ambiguity.",
+  "no_change_regions": "Whole-pixel fallback equals the original weighted merge wherever the reference is unusable BY CONSTRUCTION. This is not a new empirical finding.",
+  "fixed_settings": "No threshold tuning, output scaling, training or alignment. Prediction/target used for error metrics; input masks and crop selection use reference input only.",
+  "crop_selection": "256x256 default, largest bright-reference fraction over fixed 32-pixel grid, ties resolved top-left. Display only.",
+  "predictions_dir": "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749",
+  "expected_metrics_file": "/projects/standard/ee5561/shared/HDR/sheth047/saved_validation_metrics.csv",
+  "expected_score_tolerance": {
+    "psnr_mu_db": 0.001,
+    "ssim_mu": 1e-05
+  },
+  "python": "3.11.13",
+  "platform": "Linux-4.18.0-553.183.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "numpy": "1.26.4",
+  "opencv": "4.10.0",
+  "skimage": "0.24.0",
+  "slurm_job_id": "7976815",
+  "code_sha256": {
+    "analysis": "b9573cc05abcd92426aa7a1e056c4f90b7267da03ef7206059775b31cba5a69c",
+    "baseline": "6f30ef46e41d30df32237ce0d4a6defda1cf6c81dcfeee289a9e44c7da520e2d",
+    "fallback": "179440e388678aa1cdd529fd4772fa6dc85c047821970247cf08543a05b01727"
+  },
+  "attribution": "AI-supplied starting analysis code; students must inspect, verify, interpret and describe their actual work accurately.",
+  "expected_metrics_sha256": "8acfb38b2e3d0754e5fa79f61312ef532b8bfd821b4ddecd1f6d69d4861e914f",
+  "elapsed_seconds": 41.48599652713165,
+  "scenes_completed": [
+    {
+      "scene_id": "025",
+      "height": 1000,
+      "width": 1500,
+      "relative_times": [
+        1.0,
+        4.0,
+        16.0
+      ],
+      "crop_xywh": [
+        928,
+        0,
+        256,
+        256
+      ],
+      "fallback_fraction": 0.6482073333333334,
+      "exact_full_scale_reference_fraction": 0.02464
+    },
+    {
+      "scene_id": "045",
+      "height": 1000,
+      "width": 1500,
+      "relative_times": [
+        1.0,
+        8.0,
+        64.0
+      ],
+      "crop_xywh": [
+        960,
+        352,
+        256,
+        256
+      ],
+      "fallback_fraction": 0.902506,
+      "exact_full_scale_reference_fraction": 6e-06
+    },
+    {
+      "scene_id": "051",
+      "height": 1000,
+      "width": 1500,
+      "relative_times": [
+        1.0,
+        4.0,
+        16.0
+      ],
+      "crop_xywh": [
+        864,
+        0,
+        256,
+        256
+      ],
+      "fallback_fraction": 0.5163913333333333,
+      "exact_full_scale_reference_fraction": 0.071084
+    },
+    {
+      "scene_id": "056",
+      "height": 1000,
+      "width": 1500,
+      "relative_times": [
+        1.0,
+        4.0,
+        16.0
+      ],
+      "crop_xywh": [
+        480,
+        0,
+        256,
+        256
+      ],
+      "fallback_fraction": 0.5594993333333333,
+      "exact_full_scale_reference_fraction": 0.10034466666666667
+    },
+    {
+      "scene_id": "062",
+      "height": 1000,
+      "width": 1500,
+      "relative_times": [
+        1.0,
+        4.0,
+        16.0
+      ],
+      "crop_xywh": [
+        576,
+        352,
+        256,
+        256
+      ],
+      "fallback_fraction": 0.8086713333333333,
+      "exact_full_scale_reference_fraction": 0.008123333333333333
+    }
+  ],
+  "input_sha256": {
+    "raw/Training/025/262A1479.tif": "d85cdf49e224760261b2bc39cc6a21cfbb2a75e157e61487404be3df3ca35302",
+    "raw/Training/025/262A1480.tif": "ec4e5fff22ac142564f4e58f773702ccdd3e5ba3492f5d11b3fe633aee7fdb3b",
+    "raw/Training/025/262A1481.tif": "5dc2f1b7a83584f18a672f24495ea2ce29a0b682c1fa860cbee5d18ed1ac4d5f",
+    "raw/Training/025/exposure.txt": "77db60e386590b5bc1571875ac1d2f2afeae995c76a4ef3b175ec6bd38d803ae",
+    "raw/Training/025/HDRImg.hdr": "021e18aafd2b414d59d04843fc8d0dab834c24d5cd987249cad79352ead5452d",
+    "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749/M0/025.npy": "af195f96398820ae9ea90beae18467e792d48a38ed2c79bce9b1ad72fd6fa552",
+    "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749/M1/025.npy": "0e58dce502e54976c8477dc5063ba1a0eb0723bb449e9a1140066a6b6c73d3b1",
+    "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749/M2/025.npy": "daecc3251e7ddaab2f4bb79bf10f2762c32af6718151cc1a298fb719a835ee3d",
+    "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749/M3/025.npy": "77d0382b335df63117ff185aeb649d4b859b077bac97b15f8d43a3ed43144962",
+    "raw/Training/045/262A1936.tif": "511635ed1e7a2eb714edd8c2ab8430168709d1d7c07a613338bfed596f48bbbe",
+    "raw/Training/045/262A1937.tif": "2421e106db2472737e6c14a290d52f7d1b99a7402158784627ef2cf2fc50db5a",
+    "raw/Training/045/262A1938.tif": "abcfab0c384c3b5febeba5e845fb2cfe0ec89495c328f0272e9dae89a34f0163",
+    "raw/Training/045/exposure.txt": "295ecf52990b518a6b851229905404e22143431cec3a721de73b828502fa5af4",
+    "raw/Training/045/HDRImg.hdr": "1253e587926db7ec47534ef1482d936076ec7376e8e1be5c7816d8add7de9a1e",
+    "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749/M0/045.npy": "91445e80f11f12be9027a776ac2b2b1c9f6ab0884914846d328e20d29b4b9d1e",
+    "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749/M1/045.npy": "b007610f9a4e5b3021981b96f6bbafc0d4c98ca28b4dab81b198f4ca0ad88cc2",
+    "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749/M2/045.npy": "cca8501c0aa6b27fe4bfb325c73a6a2fc33b7782975ca7dcc5295542aa09265a",
+    "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749/M3/045.npy": "6fed7c43e84bc06d4f0ffada8013ebb30f96919a8d261ef0bcfad68296298fdf",
+    "raw/Training/051/262A2056.tif": "0057c9c8d0a0fe1a35bc13a7bc57294ad42be35f90a93bb704d6a3eee398584e",
+    "raw/Training/051/262A2057.tif": "35528dc60fdd9311d8af973f142289c2a3c2dd7407f598804b422b023db1ea30",
+    "raw/Training/051/262A2058.tif": "e37a770399e04257c38daa1e3463c5e021ed2d2fee03cc525c5197445ad39641",
+    "raw/Training/051/exposure.txt": "77db60e386590b5bc1571875ac1d2f2afeae995c76a4ef3b175ec6bd38d803ae",
+    "raw/Training/051/HDRImg.hdr": "75716f94d96425e7f1e956a6ec14ac4299d179e4446b53720df21090f177a9e3",
+    "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749/M0/051.npy": "f74194d6f014d71691283486a812433b9d913ee8390e2611230dfcecbaa60783",
+    "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749/M1/051.npy": "8ec9b0b328db536609f1113ee8efbaa588b15f0a23166121a101642a3c5466b1",
+    "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749/M2/051.npy": "2acea960284594d982d7251ed7d63bcf8d34eaf58200866482e8d4fb3cd08ac2",
+    "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749/M3/051.npy": "7f8e952fd6d2ac02718835b6795ce4553b3cf7b1b55ccd53b61a9b9bc4c3e1e6",
+    "raw/Training/056/262A2155.tif": "c6ebacf0284923c7facddbf4528860a18034665106777a938b5e910b58f7e1eb",
+    "raw/Training/056/262A2156.tif": "b09675c34ce7b453bdc4256de2409f28d41ccf8268e78dec13f0a0bcfdc555d5",
+    "raw/Training/056/262A2157.tif": "7d2432606bd06cd4858bac5da42496f2ffacd9d60063659cb548b6287b60aa60",
+    "raw/Training/056/exposure.txt": "77db60e386590b5bc1571875ac1d2f2afeae995c76a4ef3b175ec6bd38d803ae",
+    "raw/Training/056/HDRImg.hdr": "3fd837189fdc5a84b62a4625e5349f81939750acd21b17fb745321d635f0caf6",
+    "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749/M0/056.npy": "b7a005e53d0c695daf6171180cd65af63627b2e9715b58af25d6cfdd710762b6",
+    "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749/M1/056.npy": "43ceb50231c684a8d814d2a42171f76f05fb631ad6fa33782c6ce80adc1c2c6a",
+    "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749/M2/056.npy": "ad201cc07ebdabc079fc18f399c2a376b1750704b452e143a639d96adc505ab0",
+    "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749/M3/056.npy": "059cd6849458da2206ed6a7fb99df401840fca6ba0361e1b658d3787490eae32",
+    "raw/Training/062/262A2252.tif": "f5a7853ded7706723fadf749d5734acb76a3d8d933e689f73f5ae44d3c2ef31c",
+    "raw/Training/062/262A2253.tif": "c3b4afbe8426450e725d99fdf480b15c8b3ea518779ca475e37b60336cd8303c",
+    "raw/Training/062/262A2254.tif": "8962819422ded45220951cbf297ec2a0e1a7163fbf7f6e9f1f86e8ed0d24a2d2",
+    "raw/Training/062/exposure.txt": "77db60e386590b5bc1571875ac1d2f2afeae995c76a4ef3b175ec6bd38d803ae",
+    "raw/Training/062/HDRImg.hdr": "dbffb1dcbdfe769b11357befac2f5eb9261830fefbff67fd9f527a445fb13ddd",
+    "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749/M0/062.npy": "4323f71e01af300bd4bca8b8553cfcf50854a22688d640914be5597b7ce8f16c",
+    "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749/M1/062.npy": "083d0470fcd6473c7f83aecf75348e0856bc65862e91e92ef1bf74d6ebb54efd",
+    "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749/M2/062.npy": "077bc4f024d94ca359e3626c10fc5be1d8ecee129f05437ac7c02ceb0d748a29",
+    "/projects/standard/ee5561/shared/zha00175_hdr/outputs/variants-eval-v1/20261123-223749/M3/062.npy": "4836d15a5d4665bd541f3443c8220bb6a9b96fbd26488a0cd4e356cfe12ed608"
+  },
+  "full_image_model_score_audit_passed": true
+}

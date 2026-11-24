@@ -1,0 +1,11 @@
+{
+  "PAPER/PeopleTalking": {
+    "xywh": [
+      240,
+      220,
+      256,
+      256
+    ],
+    "reason": "Moving head/face of the foreground person is visible across the three input exposures. Selected from LDR inputs only, before inspecting model predictions or HDR target previews."
+  }
+}

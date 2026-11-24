@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "row_counts": {
+    "regional": 140,
+    "summary": 28,
+    "paired": 100,
+    "audit": 20
+  },
+  "all_twenty_model_score_checks_passed": true,
+  "max_abs_full_image_psnr_difference": 1.4210854715202004e-14,
+  "max_abs_full_image_ssim_difference": 6.661338147750939e-16,
+  "region_partition_and_metric_decomposition": "passed",
+  "summary_and_pairwise_arithmetic": "passed",
+  "separate_downloaded_figures_match_archive": {
+    "025_cue_comparison.png": true,
+    "056_cue_comparison.png": true,
+    "region_fractions.png": true,
+    "045_cue_comparison.png": true,
+    "051_cue_comparison.png": true,
+    "062_classical.png": true,
+    "062_cue_comparison.png": true,
+    "045_classical.png": true,
+    "056_classical.png": true,
+    "051_classical.png": true,
+    "cue_gain_by_scene.png": true,
+    "025_classical.png": true
+  },
+  "bright_region_M3_minus_M2": [
+    {
+      "scene_id": "025",
+      "n_pixels": 296493,
+      "fraction_percent": 19.7662,
+      "mae_M2": 0.0030374711060876217,
+      "mae_M3": 0.0031993767736092863,
+      "delta_mae_x1000": 0.16190566752166463,
+      "delta_psnr_mu": -0.6210831742031786,
+      "relative_mae_change_percent": 5.330278441074787
+    },
+    {
+      "scene_id": "045",
+      "n_pixels": 24,
+      "fraction_percent": 0.0015999999999999999,
+      "mae_M2": 0.04687017392258211,
+      "mae_M3": 0.051423915715832116,
+      "delta_mae_x1000": 4.5537417932500075,
+      "delta_psnr_mu": -0.3799647364226715,
+      "relative_mae_change_percent": 9.715649446429753
+    },
+    {
+      "scene_id": "051",
+      "n_pixels": 138233,
+      "fraction_percent": 9.215533333333333,
+      "mae_M2": 0.003307517363550409,
+      "mae_M3": 0.004035636023019002,
+      "delta_mae_x1000": 0.7281186594685932,
+      "delta_psnr_mu": -1.0018882366568533,
+      "relative_mae_change_percent": 22.014054030150398
+    },
+    {
+      "scene_id": "056",
+      "n_pixels": 260168,
+      "fraction_percent": 17.344533333333334,
+      "mae_M2": 0.006989276250172202,
+      "mae_M3": 0.007116277985495118,
+      "delta_mae_x1000": 0.12700173532291525,
+      "delta_psnr_mu": -0.08349593215795181,
+      "relative_mae_change_percent": 1.8170942280294922
+    },
+    {
+      "scene_id": "062",
+      "n_pixels": 33780,
+      "fraction_percent": 2.252,
+      "mae_M2": 0.004052325087466644,
+      "mae_M3": 0.0037345421899914995,
+      "delta_mae_x1000": -0.3177828974751445,
+      "delta_psnr_mu": 0.3523247383874377,
+      "relative_mae_change_percent": -7.84198924360755
+    }
+  ],
+  "bright_pixel_pooled_mae_sensitivity": {
+    "M2": 0.0045481055491526905,
+    "M3": 0.004782867130406712,
+    "delta": 0.00023476158125402147,
+    "status": "post-hoc descriptive sensitivity check, not a changed primary metric"
+  },
+  "mean_bright_delta_mae_x1000_without_045": 0.1748107912095072,
+  "interpretation_limit": "Post-hoc descriptive validation analysis, one seed. Brightness flags are input proxies, not verified motion or scene-radiance clipping."
+}

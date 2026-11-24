@@ -1,0 +1,233 @@
+{
+  "status": "received archive checks passed",
+  "source_archive_sha256": "4866994242515ada88d696fa5068e93934a678b1a1072fa6731fa1ded24bd4f8",
+  "original_files": 38,
+  "method_scene_grid": {
+    "scenes": 15,
+    "methods": 8,
+    "pairs": 120,
+    "complete_and_unique": true
+  },
+  "summary_groups_recomputed": 24,
+  "max_summary_roundoff": 1.4210854715202004e-14,
+  "protocol_identical_to_frozen_local_copy": true,
+  "runtime_and_input_manifest_hashes_match": true,
+  "checkpoint_hash_policy": "Received frozen protocol contains original validation-selected checkpoint hashes. Audited evaluator refuses mismatches; archive does not include checkpoint bytes or a second per-checkpoint runtime hash record.",
+  "all_input_ids_audited": 74,
+  "reported_train_test_exact_overlaps": 0,
+  "reported_train_test_NCC_flags": 0,
+  "test_test_duplicate_input_file_hashes": [
+    [
+      "EXTRA/003/262A2699.tif",
+      "PAPER/LadySitting/262A2706.tif"
+    ],
+    [
+      "EXTRA/005/262A2874.tif",
+      "PAPER/PeopleStanding/262A2867.tif"
+    ]
+  ],
+  "test_test_identical_target_hashes": [
+    [
+      "EXTRA/003",
+      "PAPER/LadySitting"
+    ],
+    [
+      "EXTRA/005",
+      "PAPER/PeopleStanding"
+    ]
+  ],
+  "local_real_test_scene_files_match_manifest": true,
+  "metrics_evidence_limit": "Verified saved records and recomputed aggregates. Full float predictions remain on MSI, so this is not an independent re-scoring of all 120 arrays.",
+  "runtime": {
+    "python": "3.11.13",
+    "torch": "2.7.1+cu118",
+    "cuda_runtime": "11.8",
+    "opencv": "4.10.0",
+    "numpy": "1.26.4",
+    "skimage": "0.24.0",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "slurm_job_id": "7976815",
+    "protocol_sha256": "73488cf9cb8a8d667e1689287f251bf6923550540373b6b771fd4e4f948521a2",
+    "input_manifest_sha256": "31965bc508918afb6362ccd03583f3517619615363f4102a25b1cc6a0b4803e9",
+    "model_selection": "Frozen before test evaluation; no optimizer constructed",
+    "flow_version_limit": "Alignment implementation is frozen. OpenCV version is recorded; compare it with training environment before claiming exact cross-environment replication."
+  },
+  "all15_means": {
+    "C0": {
+      "psnr_mu": 38.188736890726176,
+      "psnr_l": 33.51077796001942,
+      "ssim_mu": 0.9752727205355121,
+      "ssim_l": 0.9595806396303853,
+      "mae_mu": 0.009462485195903468
+    },
+    "C1": {
+      "psnr_mu": 24.901398985783143,
+      "psnr_l": 30.216838227388344,
+      "ssim_mu": 0.8305460813443236,
+      "ssim_l": 0.9000666000409558,
+      "mae_mu": 0.03492615682699098
+    },
+    "C2": {
+      "psnr_mu": 28.314809394189805,
+      "psnr_l": 31.772524731818507,
+      "ssim_mu": 0.9228418533131805,
+      "ssim_l": 0.9492596930479617,
+      "mae_mu": 0.01655282424874789
+    },
+    "C3": {
+      "psnr_mu": 35.08743130025895,
+      "psnr_l": 37.90822400983666,
+      "ssim_mu": 0.9690329135539156,
+      "ssim_l": 0.973818713215844,
+      "mae_mu": 0.010002976375677384
+    },
+    "M0": {
+      "psnr_mu": 42.90269556660595,
+      "psnr_l": 40.874706433657714,
+      "ssim_mu": 0.9895682641197434,
+      "ssim_l": 0.9859534168451259,
+      "mae_mu": 0.004163128254942968
+    },
+    "M1": {
+      "psnr_mu": 42.82119097423028,
+      "psnr_l": 41.74407899503772,
+      "ssim_mu": 0.9903605975329829,
+      "ssim_l": 0.9872669497882752,
+      "mae_mu": 0.004360175503556428
+    },
+    "M2": {
+      "psnr_mu": 43.3024213197377,
+      "psnr_l": 42.18293088566674,
+      "ssim_mu": 0.9904602414409545,
+      "ssim_l": 0.9875493881822416,
+      "mae_mu": 0.004085549690506264
+    },
+    "M3": {
+      "psnr_mu": 43.38803866315073,
+      "psnr_l": 42.060005447072754,
+      "ssim_mu": 0.9905174220437404,
+      "ssim_l": 0.9876998552428516,
+      "mae_mu": 0.004039078099679231
+    }
+  },
+  "paired_M3_minus_M2": [
+    {
+      "scene": "EXTRA/001",
+      "M2_psnr_mu": 49.32741652477184,
+      "M3_psnr_mu": 49.50388122204497,
+      "delta_psnr_mu": 0.17646469727312564,
+      "delta_mae_mu": -7.700554961933464e-05
+    },
+    {
+      "scene": "EXTRA/002",
+      "M2_psnr_mu": 44.84575589337279,
+      "M3_psnr_mu": 44.70553363794029,
+      "delta_psnr_mu": -0.1402222554324979,
+      "delta_mae_mu": 9.378291426206898e-05
+    },
+    {
+      "scene": "EXTRA/003",
+      "M2_psnr_mu": 49.36434664602029,
+      "M3_psnr_mu": 49.463446694998,
+      "delta_psnr_mu": 0.09910004897771074,
+      "delta_mae_mu": -6.785431079029064e-05
+    },
+    {
+      "scene": "EXTRA/004",
+      "M2_psnr_mu": 42.27728863992336,
+      "M3_psnr_mu": 42.430269642518184,
+      "delta_psnr_mu": 0.15298100259482084,
+      "delta_mae_mu": -0.00010942159264137365
+    },
+    {
+      "scene": "EXTRA/005",
+      "M2_psnr_mu": 42.80122737058078,
+      "M3_psnr_mu": 42.71130700160946,
+      "delta_psnr_mu": -0.08992036897132039,
+      "delta_mae_mu": 3.7730625422591896e-05
+    },
+    {
+      "scene": "EXTRA/006",
+      "M2_psnr_mu": 40.67425113791627,
+      "M3_psnr_mu": 40.15052665476445,
+      "delta_psnr_mu": -0.523724483151824,
+      "delta_mae_mu": 0.00014408925422656343
+    },
+    {
+      "scene": "EXTRA/007",
+      "M2_psnr_mu": 38.503725497782455,
+      "M3_psnr_mu": 38.610465919120614,
+      "delta_psnr_mu": 0.10674042133815931,
+      "delta_mae_mu": -0.00010525760646026058
+    },
+    {
+      "scene": "EXTRA/008",
+      "M2_psnr_mu": 34.53138749121181,
+      "M3_psnr_mu": 34.1193213307012,
+      "delta_psnr_mu": -0.4120661605106122,
+      "delta_mae_mu": 0.0004292411340050626
+    },
+    {
+      "scene": "EXTRA/009",
+      "M2_psnr_mu": 40.646223686968746,
+      "M3_psnr_mu": 41.07353705413675,
+      "delta_psnr_mu": 0.4273133671680043,
+      "delta_mae_mu": -0.0003739098387993151
+    },
+    {
+      "scene": "EXTRA/010",
+      "M2_psnr_mu": 36.527312082914875,
+      "M3_psnr_mu": 36.79016202481843,
+      "delta_psnr_mu": 0.2628499419035535,
+      "delta_mae_mu": -0.000310944494761739
+    },
+    {
+      "scene": "PAPER/BarbequeDay",
+      "M2_psnr_mu": 44.225368315891586,
+      "M3_psnr_mu": 44.08565558243849,
+      "delta_psnr_mu": -0.13971273345309498,
+      "delta_mae_mu": 4.31569721467788e-05
+    },
+    {
+      "scene": "PAPER/LadySitting",
+      "M2_psnr_mu": 49.2681940290222,
+      "M3_psnr_mu": 49.31722458329513,
+      "delta_psnr_mu": 0.04903055427293168,
+      "delta_mae_mu": -7.118432583747458e-05
+    },
+    {
+      "scene": "PAPER/ManStanding",
+      "M2_psnr_mu": 50.32110196292541,
+      "M3_psnr_mu": 51.58203993516543,
+      "delta_psnr_mu": 1.260937972240022,
+      "delta_mae_mu": -0.0001980852968722351
+    },
+    {
+      "scene": "PAPER/PeopleStanding",
+      "M2_psnr_mu": 42.77520169044156,
+      "M3_psnr_mu": 42.73994562392731,
+      "delta_psnr_mu": -0.035256066514250506,
+      "delta_mae_mu": -6.256454409426376e-07
+    },
+    {
+      "scene": "PAPER/PeopleTalking",
+      "M2_psnr_mu": 43.44751882632136,
+      "M3_psnr_mu": 43.5372630397823,
+      "delta_psnr_mu": 0.0897442134609463,
+      "delta_mae_mu": -0.0001307861012455969
+    }
+  ],
+  "M3_test_psnr_wins": 9,
+  "M3_test_psnr_losses": 6,
+  "mean_delta_psnr_mu": 0.08561734341304496,
+  "median_delta_psnr_mu": 0.0897442134609463,
+  "PAPER_mean_delta_psnr_mu": 0.2449487880013109,
+  "EXTRA_mean_delta_psnr_mu": 0.005951621118911987,
+  "posthoc_without_ManStanding_mean_delta": 0.0016658699254037401,
+  "limits": [
+    "One training seed",
+    "Within-dataset holdout, not external robustness",
+    "Training/validation environment uses OpenCV 5.1.0 and torch cu126, test uses OpenCV 4.10.0 and torch cu118; compare methods within each evaluation, do not infer changes solely from data partition.",
+    "Several test scenes visibly share settings; 15 benchmark entries are not established independent capture conditions."
+  ]
+}

@@ -1,0 +1,22 @@
+TRAIN / VALIDATION / TEST AUDIT
+
+Completed saved-artifact checks:
+- 69 distinct training IDs and 5 distinct validation IDs cover all 74 Training scenes, with no intersection.
+- Validation: 025, 045, 051, 056, 062.
+- All 16 detected related-scene groups and 32 flagged pairs stay together.
+- The split config agrees with its saved split-run record and archived results copy.
+- All four pilots use that split, seed 5561, and 50,000 updates.
+- Training's CropSampler is constructed from train IDs only; flips/rotations happen after scene selection.
+- Full-image validation is no_grad/model.eval and selects best mean PSNR-mu within the fixed update budget.
+- All four selected checkpoints are step 50,000, with hashes frozen before independent test evaluation.
+- Fixed fitting-check scenes 001,059,061,072 are all training scenes.
+- Flow/reliability preprocessing depends on LDR inputs and exposures, not ground-truth HDR.
+
+Not established by this audit:
+- It cannot prove every past filesystem state or that all related scenes were detected.
+- Thumbnail NCC grouping can miss related scenes. The validation sampler prefers singleton groups.
+- Validation was used repeatedly to select checkpoints and inspect performance. It is not a test set.
+- Independent test evaluation remains pending until the new GPU run completes.
+- Seed robustness and external/camera-shake generalization remain untested.
+
+Do not repartition these already-used validation scenes into a new test set. Retain the existing split and evaluate the released frozen checkpoints on the official separate Test/PAPER and Test/EXTRA scenes. Names like EXTRA/001 and Training/001 are different namespaces, so overlap is checked by content rather than folder number.

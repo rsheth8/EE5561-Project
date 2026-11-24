@@ -1,0 +1,13 @@
+EXPLORATORY FAILURE ANALYSIS
+
+Read summary_regions.csv for equal-scene averages and per_scene_regions.csv for all scene/region counts and scores. Smaller MAE is better; larger PSNR is better. For paired_differences.csv, negative delta_mae_mu means the first method helps.
+
+Regions come from the reference input. Bright/near-clipped is a proxy; it is not a ground-truth motion mask. Empty regions are blank. Regional SSIM is deliberately not calculated.
+
+The fallback keeps the weighted merge in unusable reference regions by construction. Their equality there is an implementation check, not a discovery.
+
+M3-M2 is the explicit-cue comparison at equal parameter count. M2-M1 also changes architecture/capacity. This is post-hoc validation analysis, not a new independent test or statistical proof. Preserve all scenes and unfavorable outcomes.
+
+The figures select the crop using bright-reference fraction only. Inspect every scene, then write what you observe in your own words. The error-map scales are fixed. Full-image scores always use all pixels, not the illustrated crop.
+
+Do not count use of a supplied script as independent authorship of its code. Record your review, checks, experiments, interpretation and any changes honestly.

@@ -1,0 +1,116 @@
+{
+  "protocol_version": 1,
+  "status": "frozen before this evaluator reads test model outputs",
+  "official_source": "https://cseweb.ucsd.edu/~viscomp/projects/SIG17HDR/",
+  "test_archive_url": "https://cseweb.ucsd.edu/~viscomp/projects/SIG17HDR/PaperData/SIGGRAPH17_HDR_Testset.zip",
+  "test_archive_bytes": 602667980,
+  "dataset_namespace": "Test/PAPER/<name> and Test/EXTRA/<id>, distinct from Training/<id>",
+  "test_scene_keys": [
+    "EXTRA/001",
+    "EXTRA/002",
+    "EXTRA/003",
+    "EXTRA/004",
+    "EXTRA/005",
+    "EXTRA/006",
+    "EXTRA/007",
+    "EXTRA/008",
+    "EXTRA/009",
+    "EXTRA/010",
+    "PAPER/BarbequeDay",
+    "PAPER/LadySitting",
+    "PAPER/ManStanding",
+    "PAPER/PeopleStanding",
+    "PAPER/PeopleTalking"
+  ],
+  "training_split_sha256": "336f0728dc51879bf9679c57a8bc85264a7e0060f8a7e7bded860a08a5ec85bb",
+  "checkpoint_selection": "Best original validation mean PSNR-mu within fixed 50000 updates. All selected step 50000; checkpoint SHA256 frozen.",
+  "checkpoints": {
+    "M0": {
+      "path": "pilot_M0/20261123-150849/step_050000.pt",
+      "sha256": "7d67b9a8d04dd358e080b8eb1969bc6e2b6281ff0c004514a14a4fcc772fd97d",
+      "step": 50000
+    },
+    "M1": {
+      "path": "pilot_M1/20261123-152837/step_050000.pt",
+      "sha256": "9854108121411b5006a445553cbb0b274e5fb1670ac0638c5f41091464ea6e31",
+      "step": 50000
+    },
+    "M2": {
+      "path": "pilot_M2/20261123-152844/step_050000.pt",
+      "sha256": "0ffedf95657542d64bd18ba5aa15801abba38c3b9042810f4d8e05597312c537",
+      "step": 50000
+    },
+    "M3": {
+      "path": "pilot_M3/20261123-153159/step_050000.pt",
+      "sha256": "851763d23aaf0beb81666956e12636efe41c43aa627e27672fa0c85970c88564",
+      "step": 50000
+    }
+  },
+  "classical_constants": {
+    "ref_lo": 0.1,
+    "ref_hi": 0.9,
+    "disagree_thr": 0.25,
+    "eps_weight": 0.001
+  },
+  "preprocessing": {
+    "gamma": 2.2,
+    "uint16_normalizer": 65535,
+    "relative_exposure": "2**e",
+    "reference": "middle exposure",
+    "flow": "DIS medium, exposure matching, original-source backward warp",
+    "mu": 5000,
+    "target_fit_scaling": false,
+    "inference": "full scene, no resize, no test-time augmentation, FP32 TF32 disabled"
+  },
+  "primary_metric": "Arithmetic mean full-image PSNR-mu over all 15 scenes. Also report PAPER(5) and EXTRA(10) separately.",
+  "secondary_metrics": [
+    "PSNR-L",
+    "SSIM-mu",
+    "SSIM-L",
+    "mu-MAE"
+  ],
+  "decision_rule": "Evaluate all frozen methods on every scene; save per-scene and means. Never tune checkpoints, thresholds or scale on test targets. If a scene fails, mark run incomplete, retain records and investigate before claiming all-scene means.",
+  "overlap_checks": "SHA256 of input TIFFs versus every Training TIFF; grayscale middle-image NCC 48x72 >=0.9 flagged for review. Exact duplicate stops the run; similarity flags require human review and are not silently removed.",
+  "figure_policy": {
+    "selection": "Choose explanatory cases and 256x256 textured/moving regions using input exposures, before predictions/target are displayed. Record boxes and rationale. Show all15 in a contact sheet.",
+    "panels": [
+      "reference scene locator",
+      "weighted merge",
+      "aligned rejection",
+      "M0",
+      "M1",
+      "M2",
+      "M3",
+      "target"
+    ],
+    "display": "One scene-wide reference-derived Reinhard exposure + gamma 1/2.2 for every output and target. Never per-method enhancement. Scores use original float radiance and fixed mu mapping.",
+    "error_maps": "Fixed shared 0..0.05 absolute mu-error, fixed +/-0.02 M3-minus-M2 absolute error difference, clearly marked display saturation.",
+    "scope": "Figures illustrate behavior and do not define which scenes enter test means. If post-hoc best/worst cases are added, label selection explicitly and include both directions.",
+    "documented_input_only_illustration": {
+      "PAPER/PeopleTalking": {
+        "xywh": [
+          240,
+          220,
+          256,
+          256
+        ],
+        "reason": "Moving head/face of the foreground person is visible across the three input exposures. Selected from LDR inputs only, before inspecting model predictions or HDR target previews."
+      }
+    },
+    "manual_crop_file_sha256": "e0a92f0bd997b15af91ae1b8ee5dc7ab083e51cbfbf27c0db131d79fa84f139b"
+  },
+  "limitations": [
+    "Within-dataset holdout does not resolve the instructors concern about easy/small-motion benchmarks. Challenge123 remains necessary for broader robustness.",
+    "Current models have one training seed. Inference checks do not establish seed robustness."
+  ],
+  "source_commit_reviewed": "9f83e01ec1d940e6255bd801c7559434c0b8e6ef",
+  "frozen_code_sha256": {
+    "frozen_hdr/__init__.py": "fc74c99f5abc03024357a9b3a40378ba6a5488b4b55bd89f9ea05951ec959431",
+    "frozen_hdr/alignment.py": "53159d0b437e68c15a37c12e5aaf8d99d104070140aef66983d55c3d1c0cee7f",
+    "frozen_hdr/gate.py": "6b325e9bb0e75014fef27373ee9461ae3fed96d88e9e94537f952d573c0c1757",
+    "frozen_hdr/metrics.py": "ef6ada7aa8649e53773ef666c6cd3d708c65278306722860f01bbafffbde6893",
+    "frozen_hdr/model.py": "238fc2f7ebcbfcaf8ca0e19cea3f29b58e43a1e8cb779653f3309d42725764cd",
+    "classical_rules.py": "474c5d74e245f3ba3e79338b50b2322b6fbab1e2d1e5890cf016e583c86c43bd"
+  },
+  "package_frozen_utc": "2026-11-24T22:36:22.705755+00:00"
+}
