@@ -1,0 +1,77 @@
+FROZEN TEST EVALUATION: SIMPLE STEPS
+
+WHAT THIS DOES
+Training teaches the weights using 69 scenes. Validation checks the other five scenes and selects checkpoints. The separate official test archive has 15 scenes that do not go into training or checkpoint selection. We now evaluate the four existing checkpoints and C0-C3 on all 15, rather than choosing only images that look good.
+
+The training/validation audit passed the saved-record checks. This helper still needs to run on MSI before you can claim test results. There is no reason to redo the four training runs just to add this holdout evaluation.
+
+1. UPLOAD THE ZIP
+Upload HDR_frozen_test_helpers.zip into your MSI directory:
+/projects/standard/ee5561/shared/HDR/sheth047
+
+In the terminal:
+cd /projects/standard/ee5561/shared/HDR/sheth047
+unzip -n HDR_frozen_test_helpers.zip
+
+2. DOWNLOAD THE ORIGINAL TEST ARCHIVE, IF NOT ALREADY DONE
+mkdir -p downloads
+curl -fL --retry 3 -C - \
+  'https://cseweb.ucsd.edu/~viscomp/projects/SIG17HDR/PaperData/SIGGRAPH17_HDR_Testset.zip' \
+  -o downloads/SIGGRAPH17_HDR_Testset.zip
+
+The verified archive response is 602,667,980 bytes. The project webpage's displayed size differs. Keep the downloaded ZIP unchanged. Our preparation script tests ZIP CRCs before extraction.
+
+3. PREPARE INPUTS AND CHECK OVERLAP
+.venv/bin/python test_eval/prepare_test.py \
+  --archive downloads/SIGGRAPH17_HDR_Testset.zip \
+  --raw raw \
+  --train raw/Training \
+  --out runs/test-inputs-v1
+
+This extracts into raw/Test, checks all 15 scenes, compares their input-file hashes and thumbnail similarities against all 74 Training scenes, and saves input-only crop boxes BEFORE model outputs are displayed. The Training folder is read only.
+
+Open runs/test-inputs-v1/all_test_inputs.png in Jupyter. Red boxes identify input-only illustration patches. PeopleTalking uses a documented moving-head crop; other scenes use an automatic texture/disagreement proxy. They are not verified motion masks. Each scene also appears in the full final gallery, so we can choose clear illustrations without changing the scored test set.
+
+If status.json says review_required, share input_manifest.json and overlap_audit.csv before continuing. High thumbnail similarity is a flag for inspection, not proof of leakage. Exact duplicate input files stop evaluation. Do not delete flagged scenes to improve a score.
+
+4. CHECK THE FROZEN CHECKPOINTS ARE READABLE
+ls -lh /projects/standard/ee5561/shared/zha00175_hdr/checkpoints/pilot_M0/20261123-150849/step_050000.pt
+ls -lh /projects/standard/ee5561/shared/zha00175_hdr/checkpoints/pilot_M1/20261123-152837/step_050000.pt
+ls -lh /projects/standard/ee5561/shared/zha00175_hdr/checkpoints/pilot_M2/20261123-152844/step_050000.pt
+ls -lh /projects/standard/ee5561/shared/zha00175_hdr/checkpoints/pilot_M3/20261123-153159/step_050000.pt
+
+If these paths differ, share the output so we can locate them. Do not substitute newly trained or test-selected weights.
+
+5. RUN EVALUATION IN YOUR ALLOCATED GPU TERMINAL
+nvidia-smi
+printenv SLURM_JOB_ID
+
+.venv/bin/python test_eval/evaluate_test.py \
+  --input-manifest runs/test-inputs-v1/input_manifest.json \
+  --checkpoints /projects/standard/ee5561/shared/zha00175_hdr/checkpoints \
+  --out runs/frozen-test-v1
+
+It refuses a reused output directory, changed checkpoint hashes, incomplete test lists, or unresolved overlap flags. It runs in evaluation mode without an optimizer, uses full images and the fixed gamma/flow/metric conventions, and saves all 120 method/scene score pairs. Wait for COMPLETE. A failed or partial run is not an all-15 result.
+
+If your interactive allocation is ending soon, save the run commands and start a fresh allocated GPU session before running. No new package installation should be necessary in Rahil's existing .venv. Runtime versions are recorded. Rahil's OpenCV/PyTorch builds differ from Zijian's original training environment; describe that if exact environment matching cannot be obtained.
+
+6. SEND BACK THE EVIDENCE
+Download:
+runs/frozen-test-v1/test_report_evidence.tar.gz
+
+The archive includes metrics, runtime, frozen protocol, input manifest, and all comparison/error figures. Large float prediction arrays stay on MSI under predictions/. Do not upload the dataset or float arrays to GitHub.
+
+WHAT TO READ
+- status.json: must say complete, 15 scenes and 120 method/scene pairs.
+- summary_metrics.csv: ALL15 primary mean; PAPER(5) and EXTRA(10) separately.
+- per_scene_metrics.csv: every result, including failures or cases where M3 is worse.
+- figures/PAPER/PeopleTalking/comparison.png and other scenes: locator, classical crops, M0-M3, target.
+- errors.png: same fixed error scales; blue M3-minus-M2 error is better, red is worse.
+
+FIGURES AND HONEST PRESENTATION
+Use a clear moving-person/edge example, a clipped-detail example, and a remaining-failure example when space permits. Show the full scene with its crop box, label methods, explain the target, and use the same display for every method. M2/M3 may look almost identical. Error maps can explain small changes; never invent visible differences or exaggerate per-method contrast.
+
+Scoring includes ALL 15 even if the PDF illustrates only two. If a case is selected because it is the largest gain or loss after looking at scores, state that selection rule and show both directions. Changing only display/figure layout does not require retraining. Changing model settings based on these test results makes this test set part of development; obtain a fresh final test for later tuning.
+
+LIMITS
+This is a within-dataset holdout with one training seed. It improves experimental separation but does not establish robustness to new capture conditions, camera shake, or Challenge123. Additional seeds and external captured-motion evaluation remain future work. Do not add test scores to the report until the run completes and the evidence is checked.

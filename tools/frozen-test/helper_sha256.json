@@ -1,0 +1,17 @@
+{
+  "READ_THIS_FIRST.txt": "7f0978007b6a74488123d5f736d3725504b98c2b6252c404ee53b5891acb2629",
+  "audit_summary.txt": "757e89f45ca9e7447c2945e83ccf783bb3c5564a4f55164444c2ba017f2f1acf",
+  "classical_rules.py": "474c5d74e245f3ba3e79338b50b2322b6fbab1e2d1e5890cf016e583c86c43bd",
+  "common.py": "f49fbc00d590db23dc1e9313a45f6c1d0c9e5df0fcae93d14412de72a7ba1a99",
+  "evaluate_test.py": "b410790b57621941282936f11f0e869dbcf491bd665bf36b12bee274ec35a250",
+  "frozen_hdr/__init__.py": "fc74c99f5abc03024357a9b3a40378ba6a5488b4b55bd89f9ea05951ec959431",
+  "frozen_hdr/alignment.py": "53159d0b437e68c15a37c12e5aaf8d99d104070140aef66983d55c3d1c0cee7f",
+  "frozen_hdr/gate.py": "6b325e9bb0e75014fef27373ee9461ae3fed96d88e9e94537f952d573c0c1757",
+  "frozen_hdr/metrics.py": "ef6ada7aa8649e53773ef666c6cd3d708c65278306722860f01bbafffbde6893",
+  "frozen_hdr/model.py": "238fc2f7ebcbfcaf8ca0e19cea3f29b58e43a1e8cb779653f3309d42725764cd",
+  "input_illustration_crops.json": "e0a92f0bd997b15af91ae1b8ee5dc7ab083e51cbfbf27c0db131d79fa84f139b",
+  "overfit_crops_frozen.json": "90369f751f2ab5e9a478ca6c93fb16e60ddd625394e7ace1724d9dc551c635f0",
+  "prepare_test.py": "a462f503e6988be87fe738f0050b603bb2a0a36ac0ac917df161a8a9fc914bba",
+  "test_protocol_frozen.json": "73488cf9cb8a8d667e1689287f251bf6923550540373b6b771fd4e4f948521a2",
+  "training_split_frozen.json": "336f0728dc51879bf9679c57a8bc85264a7e0060f8a7e7bded860a08a5ec85bb"
+}

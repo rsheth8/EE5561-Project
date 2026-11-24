@@ -1,0 +1,43 @@
+{
+  "status": "completed",
+  "scene_id": "001",
+  "evaluation_status": "Single training-scene development diagnostic, not held-out performance",
+  "platform": "Linux-4.18.0-553.183.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "python": "3.11.13",
+  "slurm_job_id": "7976815",
+  "script_sha256": "179440e388678aa1cdd529fd4772fa6dc85c047821970247cf08543a05b01727",
+  "dependency_sha256": "6f30ef46e41d30df32237ce0d4a6defda1cf6c81dcfeee289a9e44c7da520e2d",
+  "relative_exposure_times": [
+    1.0,
+    4.0,
+    16.0
+  ],
+  "gamma": 2.2,
+  "threshold": 0.2,
+  "encoded_usable_interval": [
+    0.05,
+    0.95
+  ],
+  "disagreement_formula": "max_RGB(abs(H_i-H_ref)/(H_i+H_ref+1e-6))",
+  "fallback_rule": "If every reference RGB channel is inside (0.05,0.95), use reference-only when either source is outside that interval in any channel or disagrees above threshold. Else preserve original weighted merge.",
+  "threshold_status": "Provisional development setting, not validated or test tuned",
+  "reference_usable_fraction": 0.8911406666666667,
+  "fallback_fraction": 0.7181046666666666,
+  "mask_class_legend": {
+    "0": "source retained",
+    "1": "radiance disagreement",
+    "2": "source weak/clipped cue",
+    "3": "reference weak/clipped; rejection unavailable"
+  },
+  "mask_limit": "Input-based proxy only, not true motion. Source weakness may come from noise/encoding/exposure; reference saturation can leave ghosts.",
+  "target_usage": "Metric evaluation and display only; not rejection or radiance scaling",
+  "metrics": "Full-image RGB mu-law PSNR and SSIM, mu=5000, peak/data_range=1, uniform SSIM 7x7 with sample covariance. Same conventions as original baseline.",
+  "crop_display_only_xywh": [
+    0,
+    200,
+    850,
+    550
+  ],
+  "display": "One global Reinhard mapping based on reference only; gamma 1/2.2; original metrics arrays unchanged",
+  "code_attribution": "Supplied starting classical baseline implementation; review and attribute honestly"
+}

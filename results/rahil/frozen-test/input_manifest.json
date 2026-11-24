@@ -1,0 +1,564 @@
+{
+  "status": "ready",
+  "protocol_sha256": "73488cf9cb8a8d667e1689287f251bf6923550540373b6b771fd4e4f948521a2",
+  "archive_sha256": "0fd027a39b9d78edad39ded650a6ed7b894f4c9a527281342ef60f76154455ef",
+  "archive": "/projects/standard/ee5561/shared/HDR/sheth047/downloads/SIGGRAPH17_HDR_Testset.zip",
+  "test_root": "/projects/standard/ee5561/shared/HDR/sheth047/raw/Test",
+  "train_root": "/projects/standard/ee5561/shared/HDR/sheth047/raw/Training",
+  "all_training_ids_checked": [
+    "001",
+    "002",
+    "003",
+    "004",
+    "005",
+    "006",
+    "007",
+    "008",
+    "009",
+    "010",
+    "011",
+    "012",
+    "013",
+    "014",
+    "015",
+    "016",
+    "017",
+    "018",
+    "019",
+    "020",
+    "021",
+    "022",
+    "023",
+    "024",
+    "025",
+    "026",
+    "027",
+    "028",
+    "029",
+    "030",
+    "031",
+    "032",
+    "033",
+    "034",
+    "035",
+    "036",
+    "037",
+    "038",
+    "039",
+    "040",
+    "041",
+    "042",
+    "043",
+    "044",
+    "045",
+    "046",
+    "047",
+    "048",
+    "049",
+    "050",
+    "051",
+    "052",
+    "053",
+    "054",
+    "055",
+    "056",
+    "057",
+    "058",
+    "059",
+    "060",
+    "061",
+    "062",
+    "063",
+    "064",
+    "065",
+    "066",
+    "067",
+    "068",
+    "069",
+    "070",
+    "071",
+    "072",
+    "073",
+    "074"
+  ],
+  "exact_input_overlaps": [],
+  "similarity_flags": [],
+  "scenes": [
+    {
+      "scene_key": "EXTRA/001",
+      "shape": [
+        1000,
+        1500,
+        3
+      ],
+      "times": [
+        1.0,
+        8.0,
+        64.0
+      ],
+      "input_hashes": {
+        "EXTRA/001/262A2615.tif": "a663198ad025f235abaa62b406f6f4d32b81a8ed0abe698217eb771948bc9039",
+        "EXTRA/001/262A2616.tif": "3fe3ea38efea1c10b24fadaf0425e354e53bf92cae80f80e444425d0bb41a647",
+        "EXTRA/001/262A2617.tif": "71ca792ddfa1a10a5d052c655f27e620d5f4c84f5087d20ac39b6cdcebebf59d",
+        "EXTRA/001/exposure.txt": "295ecf52990b518a6b851229905404e22143431cec3a721de73b828502fa5af4"
+      },
+      "crop": {
+        "xywh": [
+          352,
+          544,
+          256,
+          256
+        ],
+        "input_proxy_score": 0.048341184854507446,
+        "mean_texture": 0.18992118537425995,
+        "usable_fraction": 0.988250732421875,
+        "rule": "Highest mean input radiance disagreement * capped reference gradient * reference usable mask, 32px grid; ties top-left. Not ground-truth motion."
+      }
+    },
+    {
+      "scene_key": "EXTRA/002",
+      "shape": [
+        1000,
+        1500,
+        3
+      ],
+      "times": [
+        1.0,
+        8.0,
+        64.0
+      ],
+      "input_hashes": {
+        "EXTRA/002/262A2643.tif": "d29b23734d3744c04768d029f730c8af100f45103c1560189873212ba02321a2",
+        "EXTRA/002/262A2644.tif": "2909a990b5653e33c03bb55808adfdc58f22c9cbbf30b867a92fc88d24c1c30f",
+        "EXTRA/002/262A2645.tif": "964d0623a54b099997ba44d87eccdb76d998574434b4eeec0e59429b99b6e7b1",
+        "EXTRA/002/exposure.txt": "295ecf52990b518a6b851229905404e22143431cec3a721de73b828502fa5af4"
+      },
+      "crop": {
+        "xywh": [
+          704,
+          512,
+          256,
+          256
+        ],
+        "input_proxy_score": 0.06649298965930939,
+        "mean_texture": 0.22637775540351868,
+        "usable_fraction": 0.9741058349609375,
+        "rule": "Highest mean input radiance disagreement * capped reference gradient * reference usable mask, 32px grid; ties top-left. Not ground-truth motion."
+      }
+    },
+    {
+      "scene_key": "EXTRA/003",
+      "shape": [
+        1000,
+        1500,
+        3
+      ],
+      "times": [
+        1.0,
+        4.0,
+        16.0
+      ],
+      "input_hashes": {
+        "EXTRA/003/262A2698.tif": "3ded931721312846c6abfd69d9ef9c6b4f3772b2db164e72932683cac9ecc269",
+        "EXTRA/003/262A2699.tif": "43bc39f94eca9d9d172ad46914ce04d04175ee1d5741927eb6d391262ea878be",
+        "EXTRA/003/262A2700.tif": "72040e5303c21ae2b140b7b820caeeb43fab0db01c7705132d18cf25b8c67efd",
+        "EXTRA/003/exposure.txt": "77db60e386590b5bc1571875ac1d2f2afeae995c76a4ef3b175ec6bd38d803ae"
+      },
+      "crop": {
+        "xywh": [
+          480,
+          32,
+          256,
+          256
+        ],
+        "input_proxy_score": 0.04399217665195465,
+        "mean_texture": 0.3961889445781708,
+        "usable_fraction": 0.9755706787109375,
+        "rule": "Highest mean input radiance disagreement * capped reference gradient * reference usable mask, 32px grid; ties top-left. Not ground-truth motion."
+      }
+    },
+    {
+      "scene_key": "EXTRA/004",
+      "shape": [
+        1000,
+        1500,
+        3
+      ],
+      "times": [
+        1.0,
+        4.0,
+        16.0
+      ],
+      "input_hashes": {
+        "EXTRA/004/262A2782.tif": "00852d600a59b0e4315de6afb90af6d2c34d3ce08807935fb22216bec0f2723c",
+        "EXTRA/004/262A2783.tif": "f6eadf6d4d0100ac9b57a32f6fb09521e0e6a754cb52dd2d3d8142beccb0b014",
+        "EXTRA/004/262A2784.tif": "40c90090e49e62e760b7a32375107f154a050c70820b5ab70b13d3960cfe8dbe",
+        "EXTRA/004/exposure.txt": "77db60e386590b5bc1571875ac1d2f2afeae995c76a4ef3b175ec6bd38d803ae"
+      },
+      "crop": {
+        "xywh": [
+          160,
+          32,
+          256,
+          256
+        ],
+        "input_proxy_score": 0.07636894285678864,
+        "mean_texture": 0.31280118227005005,
+        "usable_fraction": 0.95050048828125,
+        "rule": "Highest mean input radiance disagreement * capped reference gradient * reference usable mask, 32px grid; ties top-left. Not ground-truth motion."
+      }
+    },
+    {
+      "scene_key": "EXTRA/005",
+      "shape": [
+        1000,
+        1500,
+        3
+      ],
+      "times": [
+        1.0,
+        4.0,
+        16.0
+      ],
+      "input_hashes": {
+        "EXTRA/005/262A2873.tif": "f1349b8aaf249316905f4702e5b3e59e48ac151e9d008022891ca96f9f0d5999",
+        "EXTRA/005/262A2874.tif": "f6483fa10e0cd0ab1a27314918c841b031bca5f0d8c1b0532d61ea6cc5dcf500",
+        "EXTRA/005/262A2875.tif": "561daf88ac8c4a5070babedfc3e8e8b49f0ba89c4ac1a6f5f4e41026bd9a5c0f",
+        "EXTRA/005/exposure.txt": "77db60e386590b5bc1571875ac1d2f2afeae995c76a4ef3b175ec6bd38d803ae"
+      },
+      "crop": {
+        "xywh": [
+          160,
+          128,
+          256,
+          256
+        ],
+        "input_proxy_score": 0.07854383438825607,
+        "mean_texture": 0.36941635608673096,
+        "usable_fraction": 0.951324462890625,
+        "rule": "Highest mean input radiance disagreement * capped reference gradient * reference usable mask, 32px grid; ties top-left. Not ground-truth motion."
+      }
+    },
+    {
+      "scene_key": "EXTRA/006",
+      "shape": [
+        1000,
+        1500,
+        3
+      ],
+      "times": [
+        1.0,
+        4.0,
+        16.0
+      ],
+      "input_hashes": {
+        "EXTRA/006/262A2928.tif": "98936f602ef2064107cbefad968d491792ceb5cd267c2a65df945cc726e224bf",
+        "EXTRA/006/262A2929.tif": "6a4c88a4d515699bfb0f99ce0af6e174d85156d57e28c9d1d48e88813bcd83b5",
+        "EXTRA/006/262A2930.tif": "72cecf7d8de55e4900e004ae4051c5a218390fcffc85005097faac983fe171a6",
+        "EXTRA/006/exposure.txt": "77db60e386590b5bc1571875ac1d2f2afeae995c76a4ef3b175ec6bd38d803ae"
+      },
+      "crop": {
+        "xywh": [
+          544,
+          0,
+          256,
+          256
+        ],
+        "input_proxy_score": 0.09338348358869553,
+        "mean_texture": 0.554300844669342,
+        "usable_fraction": 0.8755340576171875,
+        "rule": "Highest mean input radiance disagreement * capped reference gradient * reference usable mask, 32px grid; ties top-left. Not ground-truth motion."
+      }
+    },
+    {
+      "scene_key": "EXTRA/007",
+      "shape": [
+        1000,
+        1500,
+        3
+      ],
+      "times": [
+        1.0,
+        4.0,
+        16.0
+      ],
+      "input_hashes": {
+        "EXTRA/007/262A3170.tif": "4a64666e53bf06c3187a40af31acdb1182b7ba1fcc3055fd9a58c09968ac8efe",
+        "EXTRA/007/262A3171.tif": "5710b3086a297324f2cf26eadad74aa37a2207759781d3c51bb14c3cbcb203e2",
+        "EXTRA/007/262A3172.tif": "745626c04aee2afa2ac606bb0ad89db77fe4d644aec706149203c2b11feb8887",
+        "EXTRA/007/exposure.txt": "77db60e386590b5bc1571875ac1d2f2afeae995c76a4ef3b175ec6bd38d803ae"
+      },
+      "crop": {
+        "xywh": [
+          352,
+          0,
+          256,
+          256
+        ],
+        "input_proxy_score": 0.06300082057714462,
+        "mean_texture": 0.6012127995491028,
+        "usable_fraction": 0.8373565673828125,
+        "rule": "Highest mean input radiance disagreement * capped reference gradient * reference usable mask, 32px grid; ties top-left. Not ground-truth motion."
+      }
+    },
+    {
+      "scene_key": "EXTRA/008",
+      "shape": [
+        1000,
+        1500,
+        3
+      ],
+      "times": [
+        1.0,
+        4.0,
+        16.0
+      ],
+      "input_hashes": {
+        "EXTRA/008/262A3225.tif": "8cc50aaad842317657a9a8eff4c0e7ea04265671d4013121256dda19948cb043",
+        "EXTRA/008/262A3226.tif": "3e35c373f91730291f01363ebe81e392ddda3b3f6d5ed09cbc9f83e92cb16859",
+        "EXTRA/008/262A3227.tif": "eced177185d022c4ed529c675a463924d4dfbda1d9448a05f57b15cda7291607",
+        "EXTRA/008/exposure.txt": "77db60e386590b5bc1571875ac1d2f2afeae995c76a4ef3b175ec6bd38d803ae"
+      },
+      "crop": {
+        "xywh": [
+          1120,
+          416,
+          256,
+          256
+        ],
+        "input_proxy_score": 0.05491369590163231,
+        "mean_texture": 0.3318903148174286,
+        "usable_fraction": 0.9146728515625,
+        "rule": "Highest mean input radiance disagreement * capped reference gradient * reference usable mask, 32px grid; ties top-left. Not ground-truth motion."
+      }
+    },
+    {
+      "scene_key": "EXTRA/009",
+      "shape": [
+        1000,
+        1500,
+        3
+      ],
+      "times": [
+        1.0,
+        4.0,
+        16.0
+      ],
+      "input_hashes": {
+        "EXTRA/009/262A3239.tif": "d3a28e2bcd727603cbbcc786c600b0e69bd78861a5f494c3fca98baecf6d9412",
+        "EXTRA/009/262A3240.tif": "b0d519a4164f2029126c2e55bff99c8822efb74aee875f5aad46806fa3020284",
+        "EXTRA/009/262A3241.tif": "901ae7f3347c109d15488f94ecfc87d958f42580f811b4d901b3cba0383dc1b9",
+        "EXTRA/009/exposure.txt": "77db60e386590b5bc1571875ac1d2f2afeae995c76a4ef3b175ec6bd38d803ae"
+      },
+      "crop": {
+        "xywh": [
+          160,
+          608,
+          256,
+          256
+        ],
+        "input_proxy_score": 0.058240894228219986,
+        "mean_texture": 0.20166730880737305,
+        "usable_fraction": 0.801666259765625,
+        "rule": "Highest mean input radiance disagreement * capped reference gradient * reference usable mask, 32px grid; ties top-left. Not ground-truth motion."
+      }
+    },
+    {
+      "scene_key": "EXTRA/010",
+      "shape": [
+        1000,
+        1500,
+        3
+      ],
+      "times": [
+        1.0,
+        4.0,
+        16.0
+      ],
+      "input_hashes": {
+        "EXTRA/010/262A3282.tif": "6adfbf989bfd46cdfc629afe4f51f929a6550c5262be7b1a4b795bfea8e8081c",
+        "EXTRA/010/262A3283.tif": "e76baccb6e5c413e68ba49e3172b620908a3e743045d75b92b4421d83991f388",
+        "EXTRA/010/262A3284.tif": "c25ac0e343a1f2d704581aa543fbdcab049a6a5f847dc5f81053cc204401547e",
+        "EXTRA/010/exposure.txt": "77db60e386590b5bc1571875ac1d2f2afeae995c76a4ef3b175ec6bd38d803ae"
+      },
+      "crop": {
+        "xywh": [
+          1120,
+          0,
+          256,
+          256
+        ],
+        "input_proxy_score": 0.09388711303472519,
+        "mean_texture": 0.90055251121521,
+        "usable_fraction": 0.93597412109375,
+        "rule": "Highest mean input radiance disagreement * capped reference gradient * reference usable mask, 32px grid; ties top-left. Not ground-truth motion."
+      }
+    },
+    {
+      "scene_key": "PAPER/BarbequeDay",
+      "shape": [
+        1000,
+        1500,
+        3
+      ],
+      "times": [
+        1.0,
+        4.0,
+        16.0
+      ],
+      "input_hashes": {
+        "PAPER/BarbequeDay/262A2943.tif": "82ef3928208097f476a91d16ee59bdc78a90926b5217d6ddc1310b1efae1fc23",
+        "PAPER/BarbequeDay/262A2944.tif": "16e1d3913fd51bdfe0f215bce812332540fe589d4656b50d040916710cd4dcc7",
+        "PAPER/BarbequeDay/262A2945.tif": "f91a6a9a174612dc1c7aeb840c8843b098de9b5931e60ceb3aa14ea326d7dd24",
+        "PAPER/BarbequeDay/exposure.txt": "77db60e386590b5bc1571875ac1d2f2afeae995c76a4ef3b175ec6bd38d803ae"
+      },
+      "crop": {
+        "xywh": [
+          320,
+          128,
+          256,
+          256
+        ],
+        "input_proxy_score": 0.07907543331384659,
+        "mean_texture": 0.5498890280723572,
+        "usable_fraction": 0.9571075439453125,
+        "rule": "Highest mean input radiance disagreement * capped reference gradient * reference usable mask, 32px grid; ties top-left. Not ground-truth motion."
+      }
+    },
+    {
+      "scene_key": "PAPER/LadySitting",
+      "shape": [
+        1000,
+        1500,
+        3
+      ],
+      "times": [
+        1.0,
+        4.0,
+        16.0
+      ],
+      "input_hashes": {
+        "PAPER/LadySitting/262A2705.tif": "51a38511382ff93025cc87ee3ce6a76eb3c57f2855bdedfefc2e2240bbe8e433",
+        "PAPER/LadySitting/262A2706.tif": "43bc39f94eca9d9d172ad46914ce04d04175ee1d5741927eb6d391262ea878be",
+        "PAPER/LadySitting/262A2707.tif": "12353b0426d2247f73650f5a4d3e1b87b56afd15877b8129dc0761cc3d2dd923",
+        "PAPER/LadySitting/exposure.txt": "77db60e386590b5bc1571875ac1d2f2afeae995c76a4ef3b175ec6bd38d803ae"
+      },
+      "crop": {
+        "xywh": [
+          736,
+          512,
+          256,
+          256
+        ],
+        "input_proxy_score": 0.04534770920872688,
+        "mean_texture": 0.16690553724765778,
+        "usable_fraction": 0.9483489990234375,
+        "rule": "Highest mean input radiance disagreement * capped reference gradient * reference usable mask, 32px grid; ties top-left. Not ground-truth motion."
+      }
+    },
+    {
+      "scene_key": "PAPER/ManStanding",
+      "shape": [
+        1000,
+        1500,
+        3
+      ],
+      "times": [
+        1.0,
+        8.0,
+        64.0
+      ],
+      "input_hashes": {
+        "PAPER/ManStanding/262A2629.tif": "30d3c527450a23dc2e7d6ef79e4c6e5303ac51ef6aef98183cf2f462559a6aa0",
+        "PAPER/ManStanding/262A2630.tif": "930c486efec0fb16c855aae918edf9d3d71c37a723bd3639199a3937a2589094",
+        "PAPER/ManStanding/262A2631.tif": "047ff6f73f4381886669fefb2717f350d4a2477f8ba64f4bf54a3e15a4d92988",
+        "PAPER/ManStanding/exposure.txt": "295ecf52990b518a6b851229905404e22143431cec3a721de73b828502fa5af4"
+      },
+      "crop": {
+        "xywh": [
+          608,
+          480,
+          256,
+          256
+        ],
+        "input_proxy_score": 0.04449259117245674,
+        "mean_texture": 0.1622757613658905,
+        "usable_fraction": 0.9853973388671875,
+        "rule": "Highest mean input radiance disagreement * capped reference gradient * reference usable mask, 32px grid; ties top-left. Not ground-truth motion."
+      }
+    },
+    {
+      "scene_key": "PAPER/PeopleStanding",
+      "shape": [
+        1000,
+        1500,
+        3
+      ],
+      "times": [
+        1.0,
+        4.0,
+        16.0
+      ],
+      "input_hashes": {
+        "PAPER/PeopleStanding/262A2866.tif": "ce0b109c7b273dfd7195272d4a62c67e089019f239108ab88ef630e2f45912df",
+        "PAPER/PeopleStanding/262A2867.tif": "f6483fa10e0cd0ab1a27314918c841b031bca5f0d8c1b0532d61ea6cc5dcf500",
+        "PAPER/PeopleStanding/262A2868.tif": "85a408b58219ee11460a9e28bb53b1ef66563471f42bfad3c2d240482280ae8c",
+        "PAPER/PeopleStanding/exposure.txt": "77db60e386590b5bc1571875ac1d2f2afeae995c76a4ef3b175ec6bd38d803ae"
+      },
+      "crop": {
+        "xywh": [
+          160,
+          128,
+          256,
+          256
+        ],
+        "input_proxy_score": 0.09163755178451538,
+        "mean_texture": 0.36941635608673096,
+        "usable_fraction": 0.951324462890625,
+        "rule": "Highest mean input radiance disagreement * capped reference gradient * reference usable mask, 32px grid; ties top-left. Not ground-truth motion."
+      }
+    },
+    {
+      "scene_key": "PAPER/PeopleTalking",
+      "shape": [
+        1000,
+        1500,
+        3
+      ],
+      "times": [
+        1.0,
+        4.0,
+        16.0
+      ],
+      "input_hashes": {
+        "PAPER/PeopleTalking/262A2810.tif": "06e02f793095e9b3f8080cd29b80b838f2da3e89b1d8954983f4b6db458904f8",
+        "PAPER/PeopleTalking/262A2811.tif": "2d945c338881c222ffe776374a4112a8e26ed697cb0b02c1a2df4377fd913eb3",
+        "PAPER/PeopleTalking/262A2812.tif": "51ccc9cc3241030646d75d5e71924726bc2f78149d3f1e58219411f3715bc9a6",
+        "PAPER/PeopleTalking/exposure.txt": "77db60e386590b5bc1571875ac1d2f2afeae995c76a4ef3b175ec6bd38d803ae"
+      },
+      "crop": {
+        "xywh": [
+          240,
+          220,
+          256,
+          256
+        ],
+        "rule": "Moving head/face of the foreground person is visible across the three input exposures. Selected from LDR inputs only, before inspecting model predictions or HDR target previews.",
+        "automatic_alternative": {
+          "xywh": [
+            1216,
+            192,
+            256,
+            256
+          ],
+          "input_proxy_score": 0.04377029463648796,
+          "mean_texture": 0.2325240671634674,
+          "usable_fraction": 0.9771575927734375,
+          "rule": "Highest mean input radiance disagreement * capped reference gradient * reference usable mask, 32px grid; ties top-left. Not ground-truth motion."
+        }
+      }
+    }
+  ],
+  "figure_selection": "Fixed from input images before evaluator sees predictions or target previews. PeopleTalking uses the documented input-only human-motion illustration; others use the automatic texture/disagreement proxy.",
+  "illustration_crops_sha256": "e0a92f0bd997b15af91ae1b8ee5dc7ab083e51cbfbf27c0db131d79fa84f139b"
+}

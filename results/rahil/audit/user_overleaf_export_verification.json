@@ -1,0 +1,15 @@
+{
+  "status": "matches updated report",
+  "pages": 6,
+  "content_pages": 5,
+  "reference_pages": 1,
+  "all_six_pages_visually_reviewed": true,
+  "page_text_matches_after_compiler_glyph_normalization": true,
+  "all_three_embedded_report_figures_pixel_identical": true,
+  "compiler": "pdfTeX 1.40.29",
+  "layout_issues_observed": [],
+  "remaining_review": [
+    "author wording and contributions",
+    "assistance disclosure"
+  ]
+}

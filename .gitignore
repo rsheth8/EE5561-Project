@@ -9,3 +9,7 @@ runs/**/outputs/
 *.npz
 slurm-*.out
 logs/*.out
+
+# Local review/build scratch, never part of the evidence snapshot.
+/work/
+.DS_Store

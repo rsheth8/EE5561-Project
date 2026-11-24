@@ -1,0 +1,72 @@
+{
+  "test_people_talking.png": {
+    "source": "figures/PAPER/PeopleTalking/comparison.png",
+    "source_dimensions": [
+      1920,
+      1120
+    ],
+    "source_panel_rectangles": {
+      "locator": [
+        38,
+        178,
+        461,
+        460
+      ],
+      "C1": [
+        551,
+        146,
+        896,
+        491
+      ],
+      "C3": [
+        1025,
+        146,
+        1370,
+        491
+      ],
+      "target": [
+        1498,
+        146,
+        1843,
+        491
+      ],
+      "M0": [
+        77,
+        630,
+        422,
+        975
+      ],
+      "M1": [
+        551,
+        630,
+        896,
+        975
+      ],
+      "M2": [
+        1025,
+        630,
+        1370,
+        975
+      ],
+      "M3": [
+        1498,
+        630,
+        1843,
+        975
+      ]
+    },
+    "operation": "Crop existing rendered panels, re-layout and relabel. No color/contrast manipulation.",
+    "original_scene_crop": [
+      240,
+      220,
+      256,
+      256
+    ],
+    "selection": "Documented from input exposures before model evaluation."
+  },
+  "Test_M3_minus_M2_all15.png": {
+    "source": "paired_M3_minus_M2_audited.csv",
+    "metric": "full-image paired PSNR-mu difference for all 15 entries",
+    "positive": "M3 better"
+  }
+}
