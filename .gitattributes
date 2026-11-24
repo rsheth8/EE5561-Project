@@ -1,0 +1,10 @@
+# Preserve original transferred records and frozen evaluator bytes on every OS.
+# Their checksums, CRLF CSV rows and historical formatting are provenance.
+/results/rahil/scene001/** -text -whitespace
+/results/rahil/validation-regions/** -text -whitespace
+/results/rahil/frozen-test/** -text -whitespace
+/tools/frozen-test/** -text -whitespace
+
+# Supplied LaTeX support files must match the course template exactly.
+/reports/intermediate-2026-11-24/*.sty -text -whitespace
+/reports/intermediate-2026-11-24/refs.bst -text -whitespace
