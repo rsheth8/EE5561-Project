@@ -1,0 +1,215 @@
+{
+  "split": "configs/split.json",
+  "scenes": "val",
+  "entries": [
+    {
+      "name": "M0",
+      "variant": "M0",
+      "exp": "pilot_M0",
+      "run_dir": "runs/pilot_M0/20261123-150849",
+      "max_step": 50000
+    },
+    {
+      "name": "M1",
+      "variant": "M1",
+      "exp": "pilot_M1",
+      "run_dir": "runs/pilot_M1/20261123-152837",
+      "max_step": 50000
+    },
+    {
+      "name": "M2",
+      "variant": "M2",
+      "exp": "pilot_M2",
+      "run_dir": "runs/pilot_M2/20261123-152844",
+      "max_step": 50000
+    },
+    {
+      "name": "M3",
+      "variant": "M3",
+      "exp": "pilot_M3",
+      "run_dir": "runs/pilot_M3/20261123-153159",
+      "max_step": 50000
+    }
+  ],
+  "save_outputs": true,
+  "matched_budget": {
+    "N_star": 50000,
+    "eval_steps_reached": {
+      "M0": [
+        2000,
+        4000,
+        6000,
+        8000,
+        10000,
+        12000,
+        14000,
+        16000,
+        18000,
+        20000,
+        22000,
+        24000,
+        26000,
+        28000,
+        30000,
+        32000,
+        34000,
+        36000,
+        38000,
+        40000,
+        42000,
+        44000,
+        46000,
+        48000,
+        50000
+      ],
+      "M1": [
+        2000,
+        4000,
+        6000,
+        8000,
+        10000,
+        12000,
+        14000,
+        16000,
+        18000,
+        20000,
+        22000,
+        24000,
+        26000,
+        28000,
+        30000,
+        32000,
+        34000,
+        36000,
+        38000,
+        40000,
+        42000,
+        44000,
+        46000,
+        48000,
+        50000
+      ],
+      "M2": [
+        2000,
+        4000,
+        6000,
+        8000,
+        10000,
+        12000,
+        14000,
+        16000,
+        18000,
+        20000,
+        22000,
+        24000,
+        26000,
+        28000,
+        30000,
+        32000,
+        34000,
+        36000,
+        38000,
+        40000,
+        42000,
+        44000,
+        46000,
+        48000,
+        50000
+      ],
+      "M3": [
+        2000,
+        4000,
+        6000,
+        8000,
+        10000,
+        12000,
+        14000,
+        16000,
+        18000,
+        20000,
+        22000,
+        24000,
+        26000,
+        28000,
+        30000,
+        32000,
+        34000,
+        36000,
+        38000,
+        40000,
+        42000,
+        44000,
+        46000,
+        48000,
+        50000
+      ]
+    },
+    "max_step_reached": {
+      "M0": 50000,
+      "M1": 50000,
+      "M2": 50000,
+      "M3": 50000
+    },
+    "missing": [],
+    "run_dirs": {
+      "M0": "runs/pilot_M0/20261123-150849",
+      "M1": "runs/pilot_M1/20261123-152837",
+      "M2": "runs/pilot_M2/20261123-152844",
+      "M3": "runs/pilot_M3/20261123-153159"
+    }
+  },
+  "resolved": [
+    {
+      "name": "M0",
+      "variant": "M0",
+      "exp": "pilot_M0",
+      "run_dir": "runs/pilot_M0/20261123-150849",
+      "max_step": 50000,
+      "run_dir_resolved": "/users/8/zha00175/ee5561-hdr/runs/pilot_M0/20261123-150849",
+      "selected_step": 50000
+    },
+    {
+      "name": "M1",
+      "variant": "M1",
+      "exp": "pilot_M1",
+      "run_dir": "runs/pilot_M1/20261123-152837",
+      "max_step": 50000,
+      "run_dir_resolved": "/users/8/zha00175/ee5561-hdr/runs/pilot_M1/20261123-152837",
+      "selected_step": 50000
+    },
+    {
+      "name": "M2",
+      "variant": "M2",
+      "exp": "pilot_M2",
+      "run_dir": "runs/pilot_M2/20261123-152844",
+      "max_step": 50000,
+      "run_dir_resolved": "/users/8/zha00175/ee5561-hdr/runs/pilot_M2/20261123-152844",
+      "selected_step": 50000
+    },
+    {
+      "name": "M3",
+      "variant": "M3",
+      "exp": "pilot_M3",
+      "run_dir": "runs/pilot_M3/20261123-153159",
+      "max_step": 50000,
+      "run_dir_resolved": "/users/8/zha00175/ee5561-hdr/runs/pilot_M3/20261123-153159",
+      "selected_step": 50000
+    }
+  ],
+  "_gpu": {
+    "CUDA_VISIBLE_DEVICES": "0",
+    "SLURM_JOB_ID": "7915125",
+    "SLURM_JOB_PARTITION": "a100-4",
+    "SLURM_STEP_GPUS": "3",
+    "host": "aga23",
+    "nvidia_smi_visible": "0, NVIDIA A100-SXM4-40GB, GPU-52fd72c2-806f-2eda-d59c-cfbd3e974997, 00000000:06:00.0, 40960 MiB"
+  },
+  "_argv": [
+    "/users/8/zha00175/ee5561-hdr/hdr/evaluate.py",
+    "--config",
+    "configs/variants-eval.json",
+    "--out",
+    "runs/variants-eval-v1"
+  ],
+  "_started": "2026-11-23T22:37:49"
+}

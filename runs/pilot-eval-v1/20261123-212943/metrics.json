@@ -1,0 +1,31 @@
+{
+  "selection": {
+    "M0": {
+      "run_dir": "runs/pilot_M0/20261123-150849",
+      "step": 50000,
+      "max_step": null,
+      "output_sha256": {
+        "025": "21464d862ec6323ef2d9e0d41adea60e55232c8a79ac87f14dd09eb8f4c1ade5",
+        "045": "c45887bc4fa3048c747f4ba5be3084b2ec87502d89a0a3a4513ac61a18a27e9e",
+        "051": "a712c6e4fdd672c0d576bc7e0d1ee5d338000d701a009554ebcdacfb3b21037b",
+        "056": "015e650cc9132dc82d843946568f59bc4d8f4c11c8b30900705be4327a235543",
+        "062": "0fb990026c02dba1495ea06b20abcb5427a9061e06d33b1b4e1755a382974f78"
+      }
+    }
+  },
+  "mean": {
+    "M0": {
+      "psnr_l": 40.07222131568373,
+      "psnr_mu": 42.458007702237865,
+      "ssim_l": 0.9840806987449854,
+      "ssim_mu": 0.9891511731676289
+    }
+  },
+  "max_abs_diff_vs_training_val_log": {
+    "psnr_l": 0.0,
+    "psnr_mu": 0.0,
+    "ssim_l": 0.0,
+    "ssim_mu": 0.0
+  },
+  "cudnn_deterministic": true
+}

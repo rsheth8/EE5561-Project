@@ -1,0 +1,2 @@
+Validation PSNR-mu (5 val scenes, full image, mu=5000) vs updates for M0-M3; preliminary, single seed, 5 validation scenes.
+Matched-budget N* = 50000; selected steps {'M0': 50000, 'M1': 50000, 'M2': 50000, 'M3': 50000}. Sources: runs/pilot_M*/<ts>/val_log.csv, runs/variants-eval-v1/20261123-223749.

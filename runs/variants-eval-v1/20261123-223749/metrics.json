@@ -1,0 +1,85 @@
+{
+  "selection": {
+    "M0": {
+      "run_dir": "runs/pilot_M0/20261123-150849",
+      "step": 50000,
+      "max_step": 50000,
+      "output_sha256": {
+        "025": "21464d862ec6323ef2d9e0d41adea60e55232c8a79ac87f14dd09eb8f4c1ade5",
+        "045": "c45887bc4fa3048c747f4ba5be3084b2ec87502d89a0a3a4513ac61a18a27e9e",
+        "051": "a712c6e4fdd672c0d576bc7e0d1ee5d338000d701a009554ebcdacfb3b21037b",
+        "056": "015e650cc9132dc82d843946568f59bc4d8f4c11c8b30900705be4327a235543",
+        "062": "0fb990026c02dba1495ea06b20abcb5427a9061e06d33b1b4e1755a382974f78"
+      }
+    },
+    "M1": {
+      "run_dir": "runs/pilot_M1/20261123-152837",
+      "step": 50000,
+      "max_step": 50000,
+      "output_sha256": {
+        "025": "22cfa8a894ee36d0ad2c856c9c5c9517a696cc5adb88b3dc5ad62fd958deab4b",
+        "045": "0bd1348a072193d227e00444238d5fe5e51564c921c28d217e659633da1c5e72",
+        "051": "66440bd6bf8f48d995e1c6808a1a05c33b01934ff8b6086acd2634c05d3b2bc8",
+        "056": "5cc8c6adfe07535a05775651601d7e2db6cbcc9d2af9548d62f11f3ad72594f9",
+        "062": "6922ac7591088906218007953282e09691a13c60c9506197d8bfa449877f4bfd"
+      }
+    },
+    "M2": {
+      "run_dir": "runs/pilot_M2/20261123-152844",
+      "step": 50000,
+      "max_step": 50000,
+      "output_sha256": {
+        "025": "821e763cc1100fcfe142accd359c49537f7799f27ed973cbf03b2aca6d09982b",
+        "045": "e0bbd9cfbf3da24c3e374e6aea54f82788f89b4c9896559250c8b98925b3c531",
+        "051": "056b949883779f3eea416c7497b2e39f820654a9dc4cf25d1bc80de9d2f678cf",
+        "056": "991cb72c89e50cb75c20df89a984da144ed4744d185789d762d26b365df8ca0f",
+        "062": "9d516eb1c648afd2c17b4f95faca0a9fd38146c79ee1c5445ba2fac416a8f396"
+      }
+    },
+    "M3": {
+      "run_dir": "runs/pilot_M3/20261123-153159",
+      "step": 50000,
+      "max_step": 50000,
+      "output_sha256": {
+        "025": "3ef98124f89f8c037cc8ccebbc491668916a3cd5a0f4717917d96af439684bd7",
+        "045": "236717b6e2200b55cfd36738d7f03159e0c924912d328f6acc0f1a8b6137a8cd",
+        "051": "62e387c1bb847d16554a95a7fab9fb9b34a4a8c172b99dd5bb8f6c9ae0a6e633",
+        "056": "cc115c52fd93724e368fa63c7cc4f45f461b98902a156818ad31ee5510f6c667",
+        "062": "b75239c84cd5e6480661a6a49c8571505383c50d36bd4c6e0dc5c5dc88233e4e"
+      }
+    }
+  },
+  "mean": {
+    "M0": {
+      "psnr_l": 40.07222131568373,
+      "psnr_mu": 42.458007702237865,
+      "ssim_l": 0.9840806987449854,
+      "ssim_mu": 0.9891511731676289
+    },
+    "M1": {
+      "psnr_l": 45.451185380837366,
+      "psnr_mu": 43.22084303881984,
+      "ssim_l": 0.9926245023218424,
+      "ssim_mu": 0.9915343455814103
+    },
+    "M2": {
+      "psnr_l": 45.915063379291354,
+      "psnr_mu": 44.13422069894708,
+      "ssim_l": 0.9926632458403233,
+      "ssim_mu": 0.9918178437997058
+    },
+    "M3": {
+      "psnr_l": 45.429593473664255,
+      "psnr_mu": 44.09104068824181,
+      "ssim_l": 0.9926435224388609,
+      "ssim_mu": 0.9918262995794679
+    }
+  },
+  "max_abs_diff_vs_training_val_log": {
+    "psnr_l": 0.0,
+    "psnr_mu": 0.0,
+    "ssim_l": 0.0,
+    "ssim_mu": 0.0
+  },
+  "cudnn_deterministic": true
+}

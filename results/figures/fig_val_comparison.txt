@@ -1,0 +1,3 @@
+Validation scene 062, crop y=640, x=557, 300x300 - same scene and crop as fig_classical_ladder.png.
+C1, C3 classical (no training); M0 = AHDRNet-style pilot, step 50000, val-selected, single seed; GT.
+Display: to_uint8(H) = round(255*T(clip(H,0,1))), T = mu-law, mu=5000, identical for every panel. PSNR-mu from results/tables/val_comparison.csv.
