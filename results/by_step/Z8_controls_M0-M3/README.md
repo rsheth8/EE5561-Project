@@ -1,4 +1,4 @@
-# Exp 6d — Controls M0/M1/M2/M3 under a matched budget
+# Z8 (Exp 6d) — Controls M0/M1/M2/M3 under a matched budget
 
 **Owner:** Zijian (guide Z8); interpretation together
 

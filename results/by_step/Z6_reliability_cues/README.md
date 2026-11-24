@@ -1,4 +1,4 @@
-# Exp 6a/6b — Reliability cue maps and whether cues predict alignment error
+# Z6 (Exp 6a/6b) — Reliability cue maps and whether cues predict alignment error
 
 **Owner:** Zijian (guide Z6)
 

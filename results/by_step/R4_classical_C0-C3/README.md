@@ -1,14 +1,14 @@
-# Exp 3 — Classical merges C0–C3
+# R4 (Exp 3) — Classical merges C0–C3
 
 **Owner:** Rahil (guide R4)
 
-> **Note for Rahil:** this step was done quickly, as a provisional version, only so that Zijian's later steps (Exp 4–6) could run on time. Feel free to replace it with your own implementation and results.
+> **Note for Rahil:** this step was done quickly, as a provisional version, only so that Zijian's later steps (Z2–Z8, Exp 4–6) could run on time. Feel free to replace it with your own implementation and results.
 >
 > If you replace it, Zijian's steps depend on these pieces, so please keep them or tell Zijian so the affected runs can be re-done:
 > - `hdr/io.py`, `hdr/data.py`: per-scene arrays (`ldr`, `exposure`, `radiance`, `features`, `target`; float32, middle-exposure reference, t = 2^e, LDR / 65535) and the cache in `cache/`. Used by `hdr/train.py`, `hdr/evaluate.py`, `hdr/diagnostics.py`, `scripts/precompute_flow.py`.
 > - `configs/split.json`: the 5 validation scenes used for checkpoint selection and every val number in Exp 5/6. Changing it means re-running Exp 5/6d evaluation (and ideally training).
 > - `hdr/metrics.py`, `hdr/display.py`: PSNR/SSIM (mu-law, mu = 5000) and the display mapping. Changing PSNR/SSIM or the display only needs re-running `hdr.evaluate` and the report scripts; but the training loss uses `mu_law_torch` from `hdr/metrics.py`, so changing the mu-law itself means retraining.
-> - C0 = H_2 is the pass line of the overfit checks (Exp 4, 6c); C1–C3 numbers appear next to M0 in `05_pilot_M0/tables/val_comparison.csv`; `ghost_crop.json` fixes the scene/crop reused by `fig_val_comparison`.
+> - C0 = H_2 is the pass line of the overfit checks (Exp 4, 6c); C1–C3 numbers appear next to M0 in `Z3-Z4_pilot_M0/tables/val_comparison.csv`; `ghost_crop.json` fixes the scene/crop reused by `fig_val_comparison`.
 > - C3 uses Zijian's alignment module (`hdr/alignment.py`, flow cache).
 
 **What:** C0 reference only; C1 hat-weighted merge without alignment; C2 reference-fallback deghosting; C3 = C2 on flow-aligned frames. Metric table on the 5 val scenes, ghost comparison, error maps, good case vs classified failure.

@@ -1,4 +1,4 @@
-# Exp 6c — Gate implementation checks
+# Z7 (Exp 6c) — Gate implementation checks
 
 **Owner:** Zijian (guide Z7)
 

@@ -1,4 +1,4 @@
-# Exp 4 — Overfit check (M0)
+# Z2 + Z4 (Exp 4) — Overfit check (M0)
 
 **Owner:** Zijian (guide Z2, Z4)
 

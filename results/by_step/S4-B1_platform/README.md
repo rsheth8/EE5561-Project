@@ -1,4 +1,4 @@
-# Exp 1 — Platform check
+# S4 + B1 (Exp 1) — Platform check
 
 **Owner:** Together (shared setup, guide B1)
 

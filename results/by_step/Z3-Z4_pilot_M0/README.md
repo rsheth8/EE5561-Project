@@ -1,4 +1,4 @@
-# Exp 5 — Pilot training M0 + reproduction check
+# Z3 + Z4 + B2 (Exp 5) — Pilot training M0 + reproduction check
 
 **Owner:** Zijian (guide Z3, Z4)
 
