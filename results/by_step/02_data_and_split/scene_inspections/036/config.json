@@ -1,0 +1,22 @@
+{
+  "scene": "raw/Training/036",
+  "why": "visibly large motion chosen by eye: subject shifted left in L_1, hands/box position differ across L_1-L_3; median DIS flow 30-39 px (runs/flow metrics.csv)",
+  "_gpu": {
+    "CUDA_VISIBLE_DEVICES": null,
+    "SLURM_JOB_ID": null,
+    "SLURM_JOB_PARTITION": null,
+    "SLURM_STEP_GPUS": null,
+    "host": "ahl03",
+    "nvidia_smi_visible": "<failed: [Errno 2] No such file or directory: 'nvidia-smi'>"
+  },
+  "_argv": [
+    "/users/8/zha00175/ee5561-hdr/hdr/inspect_scene.py",
+    "--scene",
+    "raw/Training/036",
+    "--out",
+    "runs/data-check/036",
+    "--why",
+    "visibly large motion chosen by eye: subject shifted left in L_1, hands/box position differ across L_1-L_3; median DIS flow 30-39 px (runs/flow metrics.csv)"
+  ],
+  "_started": "2026-11-23T14:52:36"
+}

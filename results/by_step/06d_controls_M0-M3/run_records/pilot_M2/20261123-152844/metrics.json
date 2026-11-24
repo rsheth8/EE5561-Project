@@ -1,0 +1,15 @@
+{
+  "variant": "M2",
+  "n_params": 1668357,
+  "n_updates": 50000,
+  "best_step": 50000,
+  "best_val": {
+    "psnr_l": 45.91506337929135,
+    "psnr_mu": 44.13422069894708,
+    "ssim_l": 0.9926632458403235,
+    "ssim_mu": 0.9918178437997061
+  },
+  "train_wall_s": 25295.270312070847,
+  "n_train_scenes": 69,
+  "approx_epochs": 5797.101449275362
+}

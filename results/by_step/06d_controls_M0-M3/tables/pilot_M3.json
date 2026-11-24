@@ -1,0 +1,16 @@
+{
+  "exp": "pilot_M3",
+  "variant": "M3",
+  "seed": 5561,
+  "lr": 1e-4,
+  "betas": [0.9, 0.999],
+  "batch": 8,
+  "crop": 256,
+  "augment": true,
+  "n_updates": 50000,
+  "n_updates_formula": "floor(it_s * 6 h * 3600 / eval_every) * eval_every with it_s = 2.3515 (Exp 1, M0, A100-SXM4-40GB, fp32 TF32 off, runs/exp1/20261123-143444) -> floor(50792/2000)*2000 = 50000; identical for M0-M3",
+  "eval_every": 2000,
+  "log_every": 10,
+  "val_scenes": "val",
+  "split": "configs/split.json"
+}

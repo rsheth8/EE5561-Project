@@ -1,0 +1,6 @@
+{
+  "split": "configs/split.json",
+  "scenes": "val",
+  "entries": [{"name": "M0", "variant": "M0", "exp": "pilot_M0", "run_dir": "latest", "max_step": null}],
+  "save_outputs": true
+}

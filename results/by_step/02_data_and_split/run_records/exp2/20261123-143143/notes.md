@@ -1,0 +1,9 @@
+- 74 scenes found; pairing ok for 74
+- dtypes {'uint16': 74}; shapes {'1000x1500x3': 74}
+- best-fitting reference index counts {2: 73, 3: 1}
+- median of per-scene median rel. err: {'k1': 0.16127817575581876, 'k2': 0.018504447082611387, 'k3': 0.41175526721240685}
+- s_2 median 1.0154 (range 0.9982-1.0696); nothing rescaled
+- anomalies: {'009': 'best_k_3'}
+- tables: results/tables/dataset_inventory.csv, results/tables/ref_scale_diag.csv; cache written to cache/
+- Scene 009 flagged best_k=3 by median rel. err (k3 0.0398 vs k2 0.0464). Follow-up (results/tables/scene009_reference_check.json): 009 shares a bit-identical L_2 and H_gt with 010 (k=2 clearly best there: 0.046 vs 0.337/0.264); log-gradient correlation with H_gt is k1 0.846, k2 0.981, k3 0.767. Conclusion: H_gt is in L_2 coordinates for 009 too; 009 has little motion and is dark (p50 H_gt 0.007), so the less noisy long exposure fits the median rel. err slightly better. Reference index k=2 kept; nothing changed.
+- Related groups share identical L_2/H_gt (e.g. 009/010); the split keeps groups together (configs/split.json).

@@ -1,0 +1,15 @@
+{
+  "variant": "M3",
+  "n_params": 1668357,
+  "n_updates": 50000,
+  "best_step": 50000,
+  "best_val": {
+    "psnr_l": 45.42959347366425,
+    "psnr_mu": 44.09104068824182,
+    "ssim_l": 0.992643522438861,
+    "ssim_mu": 0.9918262995794679
+  },
+  "train_wall_s": 25479.47511267662,
+  "n_train_scenes": 69,
+  "approx_epochs": 5797.101449275362
+}

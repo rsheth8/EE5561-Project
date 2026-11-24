@@ -1,0 +1,5 @@
+Scenes 027, 036 (training split), full frames, no crop.
+This is a CLIPPING mask computed from the reference exposure alone: m(L_2) = max over RGB; over-exposed m>0.95 (magenta), under-exposed m<0.05 (cyan). It is NOT a motion mask.
+scene 027: over-exposed 36.14%, under-exposed 0.00% of pixels
+scene 036: over-exposed 29.52%, under-exposed 0.00% of pixels
+Display: LDR shown as stored (normalised by dtype max, x255, rounded); overlay alpha 0.55. Data inspection only, no method/training. Produced by scripts/fig_saturation.py.

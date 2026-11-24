@@ -1,0 +1,81 @@
+{
+  "scene_id": "036",
+  "why_selected": "visibly large motion chosen by eye: subject shifted left in L_1, hands/box position differ across L_1-L_3; median DIS flow 30-39 px (runs/flow metrics.csv)",
+  "tif_names": [
+    "262A1227.tif",
+    "262A1228.tif",
+    "262A1229.tif"
+  ],
+  "dtype": "uint16",
+  "e": [
+    0.0,
+    2.0,
+    4.0
+  ],
+  "t": [
+    1.0,
+    4.0,
+    16.0
+  ],
+  "pairing_means": [
+    0.20460210740566254,
+    0.41765525937080383,
+    0.6248745918273926
+  ],
+  "pairing_ok": true,
+  "frames": [
+    {
+      "file": "262A1227.tif",
+      "shape": [
+        1000,
+        1500,
+        3
+      ],
+      "raw_min": 1022,
+      "raw_max": 65535,
+      "raw_mean": 27237.370199111112,
+      "pct_m_gt_095": 8.293466666666667,
+      "pct_m_lt_005": 0.020466666666666668
+    },
+    {
+      "file": "262A1228.tif",
+      "shape": [
+        1000,
+        1500,
+        3
+      ],
+      "raw_min": 2675,
+      "raw_max": 65535,
+      "raw_mean": 42408.567602,
+      "pct_m_gt_095": 29.518733333333337,
+      "pct_m_lt_005": 0.0
+    },
+    {
+      "file": "262A1229.tif",
+      "shape": [
+        1000,
+        1500,
+        3
+      ],
+      "raw_min": 8686,
+      "raw_max": 65535,
+      "raw_mean": 57920.62292,
+      "pct_m_gt_095": 72.56313333333333,
+      "pct_m_lt_005": 0.0
+    }
+  ],
+  "hdr": {
+    "shape": [
+      1000,
+      1500,
+      3
+    ],
+    "min": 0.0006561279296875,
+    "max": 1.0,
+    "mean": 0.2128462940454483,
+    "p50": 0.08251953125,
+    "p99": 1.0,
+    "p999": 1.0,
+    "finite": true
+  }
+}

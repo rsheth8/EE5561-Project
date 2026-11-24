@@ -1,0 +1,5 @@
+- 32 pairs flagged with NCC > 0.9; 16 multi-scene groups
+- top NCC pair ['035', '036', 0.9999999999920354]
+- val scenes (seed 5561): ['025', '045', '051', '056', '062']
+- 69 train scenes
+- written configs/split.json (frozen) and results/figures/related_scenes.png

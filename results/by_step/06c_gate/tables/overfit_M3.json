@@ -1,0 +1,12 @@
+{
+  "exp": "overfit_M3",
+  "variant": "M3",
+  "seed": 5561,
+  "lr": 1e-4,
+  "batch": 4,
+  "crop": 256,
+  "augment": false,
+  "n_updates": 3000,
+  "log_every": 10,
+  "overfit": {"n_crops": 4, "psnr_every": 250, "crops_file": "configs/overfit_crops.json"}
+}

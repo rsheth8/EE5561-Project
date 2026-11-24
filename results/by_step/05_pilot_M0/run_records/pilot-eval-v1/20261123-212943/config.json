@@ -1,0 +1,41 @@
+{
+  "split": "configs/split.json",
+  "scenes": "val",
+  "entries": [
+    {
+      "name": "M0",
+      "variant": "M0",
+      "exp": "pilot_M0",
+      "run_dir": "latest",
+      "max_step": null
+    }
+  ],
+  "save_outputs": true,
+  "resolved": [
+    {
+      "name": "M0",
+      "variant": "M0",
+      "exp": "pilot_M0",
+      "run_dir": "latest",
+      "max_step": null,
+      "run_dir_resolved": "/users/8/zha00175/ee5561-hdr/runs/pilot_M0/20261123-150849",
+      "selected_step": 50000
+    }
+  ],
+  "_gpu": {
+    "CUDA_VISIBLE_DEVICES": "0",
+    "SLURM_JOB_ID": "7915123",
+    "SLURM_JOB_PARTITION": "a100-4",
+    "SLURM_STEP_GPUS": "0",
+    "host": "aga32",
+    "nvidia_smi_visible": "0, NVIDIA A100-SXM4-40GB, GPU-541be59b-fe78-a8e2-290d-84250a20a461, 00000000:C7:00.0, 40960 MiB"
+  },
+  "_argv": [
+    "/users/8/zha00175/ee5561-hdr/hdr/evaluate.py",
+    "--config",
+    "configs/pilot-eval.json",
+    "--out",
+    "runs/pilot-eval-v1"
+  ],
+  "_started": "2026-11-23T21:29:44"
+}

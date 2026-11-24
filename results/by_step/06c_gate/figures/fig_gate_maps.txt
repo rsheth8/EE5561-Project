@@ -1,0 +1,5 @@
+Gate maps of M3 at the end of the overfit check (3000 updates, fixed batch of 4 crops); status: gate implemented and verified to train on a fixed batch.
+Crops shown: crop 0 scene 001 y=725 x=417; crop 1 scene 059 y=266 x=566.
+Panels: L_2 (LDR shown as stored (normalised by dtype max, x255, rounded)); g_1, g_3 (gate in [0,1]); v_i validity; r_i = exp(-e/2) FB cue; q_ref exposure cue; viridis 0..1.
+Cues are estimated (DIS flow, FB check), not ground-truth motion.
+Source run: runs/overfit_M3/20261123-151540

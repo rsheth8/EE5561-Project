@@ -1,0 +1,11 @@
+- evaluated ['M0', 'M1', 'M2', 'M3'] on 5 val scenes ['025', '045', '051', '056', '062'], full image, cudnn deterministic
+- M0: run runs/pilot_M0/20261123-150849 step 50000 (max_step 50000)
+- M1: run runs/pilot_M1/20261123-152837 step 50000 (max_step 50000)
+- M2: run runs/pilot_M2/20261123-152844 step 50000 (max_step 50000)
+- M3: run runs/pilot_M3/20261123-153159 step 50000 (max_step 50000)
+- M0: PSNR-mu 42.458 PSNR-L 40.072 SSIM-mu 0.9892 SSIM-L 0.9841
+- M1: PSNR-mu 43.221 PSNR-L 45.451 SSIM-mu 0.9915 SSIM-L 0.9926
+- M2: PSNR-mu 44.134 PSNR-L 45.915 SSIM-mu 0.9918 SSIM-L 0.9927
+- M3: PSNR-mu 44.091 PSNR-L 45.430 SSIM-mu 0.9918 SSIM-L 0.9926
+- max |metric - value logged during training|: {'psnr_l': 0.0, 'psnr_mu': 0.0, 'ssim_l': 0.0, 'ssim_mu': 0.0}
+- outputs/<name>/<scene>.npy|.hdr|.png; sha256 of float outputs in metrics.json

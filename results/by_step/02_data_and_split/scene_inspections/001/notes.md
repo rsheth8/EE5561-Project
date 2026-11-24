@@ -1,0 +1,4 @@
+- scene 001 files ['262A0898.tif', '262A0899.tif', '262A0900.tif'] dtype uint16
+- e [0.0, 2.0, 4.0] t [1.0, 4.0, 16.0] pairing_ok True
+- H_gt min 0.0007935 max 1 finite True
+- selected because: first scene; exposure convention example (e = 0,2,4 -> t = 1,4,16)

@@ -1,0 +1,4 @@
+overfit check (M0), 3000 updates on one fixed batch of 4 crops; not a generalization result
+Crops: scene 001 y=725 x=417 256x256; scene 059 y=266 x=566 256x256; scene 061 y=554 x=425 256x256; scene 072 y=509 x=485 256x256.
+Loss logged every 10 updates; PSNR-mu (mean over the 4 crops) every 250 updates; C0 = H_2 on the same crops.
+Source run: runs/overfit_M0/20261123-145303; numbers from metrics.json, train_log.csv, psnr_log.csv.

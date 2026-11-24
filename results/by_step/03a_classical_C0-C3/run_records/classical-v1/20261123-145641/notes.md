@@ -1,0 +1,6 @@
+- C0-C3 on 5 val scenes ['025', '045', '051', '056', '062']; constants {"ref_lo": 0.1, "ref_hi": 0.9, "disagree_thr": 0.25, "eps_weight": 0.001}
+- C0: PSNR-mu 36.589, PSNR-L 32.721, SSIM-mu 0.9777, fallback 0.000% (mean)
+- C1: PSNR-mu 22.511, PSNR-L 29.507, SSIM-mu 0.7613, fallback 0.033% (mean)
+- C2: PSNR-mu 26.839, PSNR-L 31.871, SSIM-mu 0.9003, fallback 0.033% (mean)
+- C3: PSNR-mu 39.206, PSNR-L 42.070, SSIM-mu 0.9800, fallback 0.104% (mean)
+- outputs/<scene>_<method>.npy|.hdr hold the full-res predictions

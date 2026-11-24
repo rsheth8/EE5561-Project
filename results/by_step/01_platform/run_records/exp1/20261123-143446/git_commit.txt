@@ -1,0 +1,9 @@
+8833bc1a8e45eac0177a0fc1a966696391e11130
+DIRTY
+runs/exp2/20261123-143143/notes.md | 2 ++
+ 1 file changed, 2 insertions(+)
+untracked/modified:
+M runs/exp2/20261123-143143/notes.md
+?? results/tables/scene009_reference_check.json
+?? runs/exp1/
+?? scripts/precompute_flow.py

@@ -1,0 +1,32 @@
+a6d81098c8d1a068856bac7cf6305c19f9af8f7b
+DIRTY
+runs/pilot_M0/20261123-150849/train_log.csv  | 4414 ++++++++++++++++++++++++++
+ runs/pilot_M0/20261123-150849/val_log.csv    |  138 +
+ runs/pilot_M0/20261123-150849/wall_time.json |    2 +-
+ runs/pilot_M1/20261123-152837/train_log.csv  | 4410 +++++++++++++++++++++++++
+ runs/pilot_M1/20261123-152837/val_log.csv    |  132 +
+ runs/pilot_M1/20261123-152837/wall_time.json |    2 +-
+ runs/pilot_M2/20261123-152844/train_log.csv  | 3997 +++++++++++++++++++++++
+ runs/pilot_M2/20261123-152844/val_log.csv    |  120 +
+ runs/pilot_M2/20261123-152844/wall_time.json |    2 +-
+ runs/pilot_M3/20261123-153159/train_log.csv  | 3968 +++++++++++++++++++++++
+ runs/pilot_M3/20261123-153159/val_log.csv    |  120 +
+ runs/pilot_M3/20261123-153159/wall_time.json |    2 +-
+ 12 files changed, 17303 insertions(+), 4 deletions(-)
+untracked/modified:
+M runs/pilot_M0/20261123-150849/train_log.csv
+ M runs/pilot_M0/20261123-150849/val_log.csv
+ M runs/pilot_M0/20261123-150849/wall_time.json
+ M runs/pilot_M1/20261123-152837/train_log.csv
+ M runs/pilot_M1/20261123-152837/val_log.csv
+ M runs/pilot_M1/20261123-152837/wall_time.json
+ M runs/pilot_M2/20261123-152844/train_log.csv
+ M runs/pilot_M2/20261123-152844/val_log.csv
+ M runs/pilot_M2/20261123-152844/wall_time.json
+ M runs/pilot_M3/20261123-153159/train_log.csv
+ M runs/pilot_M3/20261123-153159/val_log.csv
+ M runs/pilot_M3/20261123-153159/wall_time.json
+?? runs/pilot-eval-v1/
+?? runs/pilot_M0/20261123-150849/FINISHED
+?? runs/pilot_M0/20261123-150849/metrics.json
+?? runs/pilot_M0/20261123-150849/notes.md

@@ -1,0 +1,5 @@
+- evaluated ['M0'] on 5 val scenes ['025', '045', '051', '056', '062'], full image, cudnn deterministic
+- M0: run runs/pilot_M0/20261123-150849 step 50000 (max_step None)
+- M0: PSNR-mu 42.458 PSNR-L 40.072 SSIM-mu 0.9892 SSIM-L 0.9841
+- max |metric - value logged during training|: {'psnr_l': 0.0, 'psnr_mu': 0.0, 'ssim_l': 0.0, 'ssim_mu': 0.0}
+- outputs/<name>/<scene>.npy|.hdr|.png; sha256 of float outputs in metrics.json

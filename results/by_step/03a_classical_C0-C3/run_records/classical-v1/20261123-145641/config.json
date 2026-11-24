@@ -1,0 +1,26 @@
+{
+  "split": "configs/split.json",
+  "scenes": "val",
+  "ref_lo": 0.1,
+  "ref_hi": 0.9,
+  "disagree_thr": 0.25,
+  "eps_weight": 0.001,
+  "hat": "w(z) = 1 - |2z - 1| per channel",
+  "gamma": 2.2,
+  "_gpu": {
+    "CUDA_VISIBLE_DEVICES": null,
+    "SLURM_JOB_ID": null,
+    "SLURM_JOB_PARTITION": null,
+    "SLURM_STEP_GPUS": null,
+    "host": "ahl03",
+    "nvidia_smi_visible": "<failed: [Errno 2] No such file or directory: 'nvidia-smi'>"
+  },
+  "_argv": [
+    "/users/8/zha00175/ee5561-hdr/hdr/classical.py",
+    "--config",
+    "configs/classical.json",
+    "--out",
+    "runs/classical-v1"
+  ],
+  "_started": "2026-11-23T14:56:41"
+}

@@ -1,0 +1,4 @@
+- scene 027 files ['262A1556.tif', '262A1557.tif', '262A1558.tif'] dtype uint16
+- e [0.0, 2.0, 4.0] t [1.0, 4.0, 16.0] pairing_ok True
+- H_gt min 0.000824 max 1 finite True
+- selected because: largest saturated fraction: 36.14% of pixels with m(L_2)>0.95 (dataset_inventory.csv)

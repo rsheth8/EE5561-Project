@@ -1,0 +1,9 @@
+a037d146913d9725d12eb019b63dd5d0d58ae8d3
+DIRTY
+runs/pilot_M0/20261123-150849/train_log.csv | 1 +
+ runs/pilot_M1/20261123-152837/train_log.csv | 1 +
+ 2 files changed, 2 insertions(+)
+untracked/modified:
+M runs/pilot_M0/20261123-150849/train_log.csv
+ M runs/pilot_M1/20261123-152837/train_log.csv
+?? runs/pilot_M3/

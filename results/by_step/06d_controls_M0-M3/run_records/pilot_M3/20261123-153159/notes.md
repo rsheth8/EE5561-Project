@@ -1,0 +1,4 @@
+- M3 pilot; 50000 updates, batch 8, lr 0.0001, fp32 (TF32 off), seed 5561
+- params 1668357; train wall 7.08 h; approx epochs (N*8/#train) 5797
+- best val PSNR-mu 44.091 at step 50000 (5 val scenes, full image)
+- val_log.csv has per-scene + mean metrics every eval step; checkpoints/step_*.pt kept for matched-budget selection

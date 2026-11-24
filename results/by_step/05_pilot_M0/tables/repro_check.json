@@ -1,0 +1,34 @@
+{
+  "checkpoint": "runs/pilot_M0/20261123-150849/checkpoints/step_050000.pt",
+  "eval_run_a": "runs/pilot-eval-v1/20261123-212943",
+  "eval_run_b": "runs/pilot-eval-v1/20261123-213012",
+  "max_abs_diff_vs_training_log_a": {
+    "psnr_l": 0.0,
+    "psnr_mu": 0.0,
+    "ssim_l": 0.0,
+    "ssim_mu": 0.0
+  },
+  "max_abs_diff_vs_training_log_b": {
+    "psnr_l": 0.0,
+    "psnr_mu": 0.0,
+    "ssim_l": 0.0,
+    "ssim_mu": 0.0
+  },
+  "outputs_bit_identical_a_vs_b": {
+    "025": true,
+    "045": true,
+    "051": true,
+    "056": true,
+    "062": true
+  },
+  "sha256_equal": {
+    "025": true,
+    "045": true,
+    "051": true,
+    "056": true,
+    "062": true
+  },
+  "tolerance_db": 0.0001,
+  "metrics_within_tol": true,
+  "pass": true
+}
