@@ -148,7 +148,7 @@ def main():
             require((path.parent / target).exists(), f'Broken link in {path.relative_to(ROOT)}: {target}')
             links += 1
     print(f'PASS: three report figures, 10-file Overleaf ZIP and {links} local documentation links')
-    print('LIMIT: saved-record audit only; full test float arrays were not transferred or rescored. Human writing/contribution/disclosure review and submission confirmation remain.')
+    print('LIMIT: saved-record audit only; full test float arrays were not transferred or rescored. Human writing/contribution review and submission confirmation remain.')
 
 
 if __name__ == '__main__':

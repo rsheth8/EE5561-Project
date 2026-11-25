@@ -6,20 +6,28 @@ Updated November 24, 2026. This supersedes the status in the November 23 step-by
 
 ## Read this first
 
-The experiments needed for the intermediate-report draft are complete. Rahil has integrated his MSI checks, classical/regional analysis and the separate frozen test evaluation into the required LaTeX template. He manually updated the shared Overleaf project and sent its exported PDF back for checking. That export matches the current report text and all three figures, with five content pages and one references page.
+The experiments needed for the intermediate-report draft are complete. Rahil has integrated his MSI checks, classical/regional analysis and the separate frozen test evaluation into the required LaTeX template. He manually updated the shared Overleaf project and sent its exported PDF back for checking. That earlier export was checked against its then-current snapshot. Since then, the source received the final wording and notation fixes below. The current source compiles to five content pages plus references; no fresh live Overleaf export has been independently checked after these edits.
 
-**Zijian's immediate job is to review and own the writing before submission.** Read the whole report, check the methods and claims against the records, and rewrite explanations of your implementation, training and reasoning in your own voice and understanding. Do more than grammar cleanup. You should be able to explain each equation, baseline, comparison and limitation without relying on agent wording. Rahil should confirm the account of his work and both authors should agree on the contribution and assistance statements.
+**Zijian's immediate job is to review and own the writing before submission.** Read the whole report, check the methods and claims against the records, and rewrite explanations of your implementation, training and reasoning in your own voice and understanding. Do more than grammar cleanup. You should be able to explain each equation, baseline, comparison and limitation without relying on agent wording. Rahil should confirm the account of his work and both authors should confirm the contribution statements.
 
 The intermediate instructions say one PDF per group, maximum five content pages excluding references, due November 24. The instructions do not give an exact time. Check Canvas. Nothing in this handoff confirms a Canvas submission.
 
+## Latest report revision and where to work
+
+Rahil confirms that Zijian already has access to the shared Overleaf project with the latest update. Continue the final writing pass there. GitHub is the matching backup and evidence/agent reference; do not upload an older ZIP over newer shared edits.
+
+The revised source strengthens the cue conclusion, explains the cues in plain language, connects scientific problems to ordered next steps, defines the feature symbols near Equation 3, and specifies that the low-weight fallback applies per channel in C1-C3. The standalone Assistance paragraph and colored hyperlink boxes were removed at Rahil's request. Results, methods, checkpoints, the supplied template support files and all three figures are unchanged.
+
+The compiled backup is `reports/intermediate-2026-11-24/TeamHDR_EE5561_F26.pdf`. Recompile the shared project and inspect its actual export after your edits. The earlier `overleaf-export-checked.pdf` is retained only as a historical checked export.
+
 ## What to do before submitting
 
-1. Open the existing shared Overleaf project and read the current draft, including captions, references, contributions and assistance disclosure. Its live URL is not recorded in this repository; use the shared project already used by the team. Avoid replacing newer collaborator edits with the saved snapshot.
+1. Open the existing shared Overleaf project and read the current draft, including captions, references and contributions. Its live URL is not recorded in this repository; use the shared project already used by the team. Avoid replacing newer collaborator edits with the saved snapshot.
 2. Check technical accuracy. Explain gamma/exposure conversion, C0-C3, DIS alignment, attention/dilation, M0-M3 and the equal-capacity M2/M3 cue control in words you understand. Check the shift from the original proposal.
 3. Rewrite unclear or agent-like passages yourself. Focus especially on your model/training work, related-work positioning, interpretation and future plan. Preserve factual limits and original metrics. Review Rahil's sections too, while keeping his actual contribution accurate.
-4. Confirm names/emails, what each person actually did and the assistance disclosure against actual use and course policy. Folder labels do not establish authorship.
+4. Confirm names/emails and what each person actually did. Folder labels do not establish authorship.
 5. Recompile and inspect all pages after edits. The current snapshot is five content pages plus references; Overleaf/compiler or wording changes can move material onto a sixth content page.
-6. Agree who submits, confirm the exact Canvas deadline and whether a submission already exists, then have one member upload the final PDF as `HDR_EE5561_F26.pdf`. Check the uploaded/downloaded file.
+6. Agree who submits, confirm the exact Canvas deadline and whether a submission already exists, then have one member upload the final PDF as `TeamHDR_EE5561_F26.pdf`. Check the uploaded/downloaded file.
 
 ## What Rahil completed
 
@@ -28,7 +36,7 @@ The intermediate instructions say one PDF per group, maximum five content pages 
 - Ran classical comparisons and regional failure analysis across validation scenes 025, 045, 051, 056 and 062. Re-scored frozen M0-M3 predictions; all 20 full-image PSNR/SSIM pairs matched saved records to numerical precision. Checked region counts and arithmetic, including the 24-pixel bright region in scene 045.
 - Ran the frozen C0-C3 and M0-M3 evaluation on all 15 separate test entries on an MSI A100. Preparation compared test inputs with all 74 Training-archive scenes; saved records report no exact overlap or reference-thumbnail correlation flags. This cannot prove every related capture was detected.
 - Transferred results, inspected diagnostic figures, and integrated the test results, clear face crop, runtime differences and weak cue findings into the report.
-- Updated the shared Overleaf project manually. Its exported PDF was checked against the current report: matching text/figures, five content pages plus references, no observed clipping or overlaps.
+- Updated the shared Overleaf project manually. Its earlier exported PDF was checked against the earlier snapshot: matching text/figures, five content pages plus references, no observed clipping or overlaps. The current source has since received the final text revisions.
 
 Rahil used AI-supported starting scripts, figures, checking and drafting. Do not turn execution/analysis work into a claim that he independently authored every supplied implementation.
 

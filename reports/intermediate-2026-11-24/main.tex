@@ -2,12 +2,13 @@
 % Uses the supplied F26 template support files unchanged.
 % Numerical sources: repo commit 9f83e01ec1d940e6255bd801c7559434c0b8e6ef;
 % Rahil's regional and test values: transferred MSI archives, Nov. 24, 2026.
-% Confirm names/emails, contribution statements and assistance disclosure.
+% Confirm names/emails and contribution statements with both authors.
 % Replace draft wording with explanations you understand and can defend.
 \documentclass{article}
 \usepackage[T1]{fontenc}
 \usepackage{style,times}
 \usepackage{hyperref}
+\hypersetup{hidelinks}
 \usepackage{url}
 \usepackage{wrapfig,graphicx}
 \usepackage{amsmath}
@@ -29,9 +30,9 @@ Movement between bracketed exposures can produce ghosts in an HDR merge. We test
 \end{abstract}
 
 \section{Introduction}
-High dynamic range (HDR) imaging preserves detail across bright and dark areas. We merge photos taken at different exposures to recover that range. Ghosting happens when something moves from shot to shot. When those photos are merged, we can get double edges and see-through copies of objects. Rahil suggested this project because he is interested in photography and has run into this problem while shooting. Our goal is to remove those ghosts while keeping the detail that made us take an HDR bracket in the first place.
+High dynamic range (HDR) imaging combines bracketed exposures to preserve bright and dark detail. Movement between shots can leave double edges or see-through copies of objects. Rahil proposed this project after encountering ghosting in his photography. Our goal is to reduce these ghosts while retaining useful detail.
 
-We use the middle exposure as the reference pose and coordinate system. Using only that image avoids merging different poses, but loses detail where it is clipped. Alignment can recover useful information from the other photos and can also introduce errors. We test whether explicit exposure and alignment-reliability cues help a learned gate choose between original and aligned features. Comparing the same gate with constant versus measured cues separates their effect from the extra feature path.
+We use the middle exposure as the reference pose and coordinate system. Its clipped regions lose detail; other exposures can recover detail but require alignment, which can introduce errors. We test whether exposure and alignment-reliability cues help a learned gate choose between original and aligned features. Constant versus measured cues at equal capacity isolate their contribution.
 
 \section{Related Works}
 \citet{kalantari2017} provide the dynamic-scene HDR dataset used here and study learning-based merging. AHDRNet uses the reference to weight non-reference features before merging, with dilated residual dense blocks providing wider context \citep{yan2019}. Our backbone follows that approach.
@@ -73,7 +74,7 @@ C2 reduces a non-reference contribution when it disagrees with a usable referenc
 \begin{equation}
 |H_i-H_2|/\max(H_i,H_2,10^{-4})>0.25,
 \end{equation}
-its weight becomes zero. Other contributions remain in the weighted merge. C3 applies the same rule after optical-flow alignment, with non-reference weights also multiplied by an in-bounds validity mask. If the total weight is below $10^{-3}$, the code chooses the shortest exposure when $\max_{RGB}L_2\geq0.5$, otherwise the longest; an invalid sample falls back to the reference. These controls use a specified weighted merge, rather than a full camera-response-calibrated HDR method.
+its weight becomes zero. Other contributions remain in the weighted merge. C3 applies the same rule after optical-flow alignment, with non-reference weights also multiplied by an in-bounds validity mask. In C1--C3, a channel with total weight below $10^{-3}$ uses the shortest exposure when $\max_{RGB}L_2\geq0.5$, otherwise the longest; an invalid sample falls back to the reference. These controls use a specified weighted merge, rather than a full camera-response-calibrated HDR method.
 
 Optical flow estimates where a pixel in the reference should be sampled in another image. Warping uses those locations to resample the source. We use OpenCV's medium-preset DIS flow \citep{kroeger2016}. Before flow estimation, the darker photo is raised to the brighter photo's exposure using the same gamma/exposure model. The estimated flow then warps the original source image. A synthetic translation check verifies the sampling direction and invalid borders; it is a code diagnostic, not a camera-shake benchmark.
 
@@ -89,14 +90,14 @@ The merge network has three dilated residual dense blocks. Each contains six den
 \label{fig:pipeline}
 \end{figure}
 
-M0 uses original inputs; M1 tests alignment with the same backbone. M2 adds both paths and a gate; M3 tests measured cues against M2 at equal capacity (Fig.~\ref{fig:pipeline}). The gate uses reference, original, and aligned features:
+M0 uses original inputs; M1 tests alignment with the same backbone. M2 adds both paths and a gate; M3 tests measured cues against M2 at equal capacity (Fig.~\ref{fig:pipeline}). Here $Z_2$, $Z_i^o$, and $Z_i^w$ denote reference, original-source, and aligned-source features:
 \begin{equation}
 g_i=v_i\sigma\!\left(G_i([Z_2,Z_i^o,Z_i^w,c_i])\right),\qquad
 \widetilde Z_i=g_iZ_i^w+(1-g_i)Z_i^o.
 \end{equation}
 Values near one favor aligned features; values near zero favor original features. $G_i$ uses two $3\times3$ convolutions with $196\!\rightarrow\!64\!\rightarrow\!1$ channels. $v_i$ is zero when the sampling location is outside the source, forcing the original path at that pixel.
 
-M2 sets all four cue channels to one. M3 uses $c_i=[q_2,q_i^w,v_i,r_i]$, where $q(L)=1-|2\max_{RGB}(L)-1|$ measures distance from extreme brightness and $r_i=\exp(-E_i/2)$ measures forward/backward flow agreement. $E_i$ is the squared disagreement after resampling the backward flow. These estimated cues are not motion labels. Both retain hard validity $v_i$ and equal parameter counts. M3 versus M2 tests cue inputs; M2 versus M1 also changes architecture and capacity.
+M2 sets all four cue channels to one. M3 uses $c_i=[q_2,q_i^w,v_i,r_i]$, where $q(L)=1-|2\max_{RGB}(L)-1|$ measures distance from extreme brightness and $r_i=\exp(-E_i/2)$ measures forward/backward flow agreement. $E_i$ is the squared disagreement after resampling the backward flow. Exposure cues flag very dark or bright measurements that may be unreliable. Flow consistency indicates whether forward and backward alignment estimates agree. These proxies may help the gate decide when to trust aligned features, but agreement does not guarantee correct alignment. Both variants retain hard validity $v_i$ and equal parameter counts. M3 versus M2 tests cue inputs; M2 versus M1 also changes architecture and capacity.
 
 \subsection{Training, compute, and evaluation}
 Pilots ran on MSI A100-SXM4-40GB GPUs through Slurm (Python 3.11.13, PyTorch 2.7.1+cu126, CUDA 12.6, OpenCV 5.1.0). Rahil verified GPU updates and ran test evaluation in MSI OnDemand with PyTorch 2.7.1+cu118, CUDA 11.8, and OpenCV 4.10.0. The implementation is frozen, but runtime versions differ. Each used seed 5561, Adam with $(0.9,0.999)$, learning rate $10^{-4}$, batch eight, $256\times256$ crops, flips and 90-degree rotations, and 50,000 updates. Training used FP32 with TF32 disabled. M0/M1 have 1,441,283 parameters; M2/M3 have 1,668,357. Equal update counts do not imply equal compute cost.
@@ -163,20 +164,17 @@ Rahil re-scored the frozen M0--M3 predictions on the five validation scenes; all
 Input-defined bright regions have any reference channel at least 0.95; usable regions have all channels in $(0.05,0.95)$. These are brightness proxies, not verified motion or clipping. M3 lowers bright-region mu-MAE only in validation scene 062 (7.84\%); it raises that error in the other four scenes. Scene 045 has only 24 bright pixels, so its regional result has very limited coverage. This exploratory analysis reuses model-selection scenes; SSIM is scored only on full images.
 
 \section{Discussion and Next Steps}
-Measured cues give a small, uneven benefit, motivating separate exposure-cue and flow-cue ablations. The Kalantari holdout does not resolve the concern about limited motion diversity.
+The current experiments do not establish a consistent benefit from explicit reliability cues. Validation PSNR-mu falls slightly, and the small test gain is concentrated in one scene. Alignment also helps some cases and harms others. The Kalantari holdout does not resolve the concern about difficult captured motion.
 
-Following feedback, we shifted from the proposed synthetic-motion benchmark and method selector to captured-scene controls and the cue comparison. We specify classical rules, gamma, attention, dilation, and the gate; synthetic shifts check code only. We checked an interrupted download, moved large files after quota limits, and grouped detected relatives before training.
+Following feedback, we shifted from the proposed synthetic-motion benchmark and method selector to captured-scene controls and the cue comparison. We specify the classical rules, gamma, attention, dilation, and gate; synthetic shifts check code only. We checked an interrupted download, moved large files after quota limits, and grouped detected relatives before training.
 
-Next, Zijian will run individual-cue ablations and additional seeds. Rahil will audit Challenge123's exposure/target conventions and annotate motion/clipping cases for external evaluation \citep{kong2024}. Camera-shake and cross-dataset tests remain uncompleted. The current test results will not be used to retune these reported checkpoints.
+First, Zijian will separate exposure-cue and flow-cue ablations to investigate the inconsistent cue effect, then add seeds to assess repeatability. Rahil's proposed next step is to audit Challenge123's exposure/target conventions and annotate motion/clipping cases before external evaluation \citep{kong2024}. Matching runtime versions would help separate environment effects from data differences. Camera-shake and cross-dataset tests remain uncompleted. These test results will not be used to retune the reported checkpoints.
 
 \subsubsection*{Work Done by Each Member}
 % AUTHOR REVIEW REQUIRED: these statements describe observed work, not the R/Z folder labels.
-\textbf{Rahil Sheth:} proposed the photography problem; checked his MSI GPU environment; downloaded and inventoried the data; inspected scene 001; ran classical controls and regional analysis on five validation scenes, checked 20 saved model-score pairs, and ran the frozen 15-entry test evaluation with overlap checks and diagnostic figures.
+\textbf{Rahil Sheth:} proposed the photography problem; checked his MSI GPU environment; downloaded and inventoried the data; inspected scene 001; ran classical controls, compared bright-reference and full-image errors on five validation scenes, checked 20 saved model-score pairs, and ran the frozen 15-entry test evaluation with overlap checks and diagnostic figures.
 
 \textbf{Zijian Zhang:} implemented the shared data/model pipeline, alignment, and gate; ran fitting checks and four model pilots; and organized evaluation records, checkpoints, and figures.
-
-% Confirm assistance disclosure with both authors/course policy.
-\textbf{Assistance:} AI supported setup/evaluation scripts, repository checks, figures, and drafting. Metrics come from recorded experiments.
 
 \clearpage
 \bibliography{refs}
