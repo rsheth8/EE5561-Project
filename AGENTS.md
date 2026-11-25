@@ -1,6 +1,6 @@
 # EE5561 HDR agent context
 
-Read `docs/HANDOFF.md`, `results/TEST_RESULTS.md` and `docs/REPRODUCING.md` before work. The current intermediate report is `reports/intermediate-2026-11-24/main.tex`.
+Read `docs/HANDOFF.md`, `results/TEST_RESULTS.md` and `docs/REPRODUCING.md` before work. The current intermediate report backup is `reports/intermediate-2026-11-24/main.tex`. Rahil confirms the shared Overleaf project has the latest update and Zijian already has access. Continue author edits there; never replace newer shared edits with an older repository snapshot. Submit as `TeamHDR_EE5561_F26.pdf`.
 
 ## Preserve the experiment
 
@@ -25,7 +25,7 @@ Read `docs/HANDOFF.md`, `results/TEST_RESULTS.md` and `docs/REPRODUCING.md` befo
 - R/Z guide folder names reflect the old plan, not proven implementation authorship. Use the observed contributions in the handoff and have both students confirm them.
 - All report prose remains an author-review draft. Zijian must check the whole report and rewrite explanations of his methods, training and analysis in his own voice and understanding. Rahil must confirm the account of his work.
 - Agents may help check facts and clarity, but must not fabricate student authorship, comprehension or approval. Rewriting means explaining the work accurately, not disguising assistance.
-- Keep truthful assistance disclosure and completed/future-work distinctions. Challenge123, camera-shake evaluation, individual-cue ablations, extra seeds and cross-dataset claims are not completed results.
+- Rahil requested removal of the standalone Assistance paragraph from the report. Do not automatically reinsert it. Keep accurate recorded provenance and completed/future-work distinctions. Challenge123, camera-shake evaluation, individual-cue ablations, extra seeds and cross-dataset claims are not completed results.
 - No Canvas submission, email or other message is authorized merely by this file. Confirm submission status with the students.
 
 ## Checks

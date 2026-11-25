@@ -1,11 +1,15 @@
 # Current intermediate-report snapshot
 
-This is the test-integrated handoff snapshot, November 24, 2026. Both authors must review the writing, actual contributions and assistance disclosure. No Canvas submission is confirmed.
+This is the test-integrated handoff snapshot, November 24, 2026. Both authors must review the writing and actual contributions. Rahil confirms Zijian already has access to the shared Overleaf project with the latest update; continue editing there. No Canvas submission is confirmed.
 
-- [HDR_EE5561_F26.pdf](HDR_EE5561_F26.pdf): compiled source snapshot, five content pages plus one reference page.
-- [overleaf-export-checked.pdf](overleaf-export-checked.pdf): Rahil's exported shared Overleaf version. Text and all three embedded figures match the source snapshot; all six pages were visually checked. Its pdfLaTeX rendering is valid even though the local snapshot used Tectonic/XeTeX.
+- [TeamHDR_EE5561_F26.pdf](TeamHDR_EE5561_F26.pdf): compiled source snapshot, five content pages plus one reference page.
+- [overleaf-export-checked.pdf](overleaf-export-checked.pdf): historical shared Overleaf export from before the final wording/notation changes. It was checked against its earlier snapshot and is retained for provenance, not as the current submission PDF. A fresh live export must be checked after the authors finish editing.
 - [main.tex](main.tex) and [refs.bib](refs.bib): editable report and bibliography.
 - [Overleaf_update_files.zip](Overleaf_update_files.zip): only the seven root source/support files and three figures needed for Overleaf, without the large evidence folders.
+
+## Final text changes
+
+The current `main.tex` uses the cautious cue conclusion, clearer cue intuition and an ordered scientific plan. It defines $Z_2$, $Z_i^o$ and $Z_i^w$, clarifies the per-channel fallback in C1-C3, and removes the standalone Assistance paragraph and colored link boxes. The template support files, figures and numerical results are unchanged. The local source was compiled and all six rendered pages were checked.
 
 ## Editing and compiling
 
@@ -17,7 +21,7 @@ Choose `main.tex` as the main document. XeLaTeX plus BibTeX works; the checked s
 tectonic --keep-logs main.tex
 ```
 
-Re-render and inspect every page after changes. The limit is five content pages excluding references. Download one final PDF named `HDR_EE5561_F26.pdf`; agree which member submits it and verify the actual Canvas deadline/upload.
+Re-render and inspect every page after changes. The limit is five content pages excluding references. Download one final PDF named `TeamHDR_EE5561_F26.pdf`; agree which member submits it and verify the actual Canvas deadline/upload.
 
 ## Current figure/table numbering
 
