@@ -1,0 +1,8 @@
+$ uv run scripts/verify_handoff.py
+PASS: 96 report/helper/evidence artifact hashes
+PASS: preserved helper/protocol/split and four released checkpoint byte hashes
+PASS: 120 unique scores; all 24 aggregates recomputed (max error 1.42e-14); 9 wins/6 losses; M3-M2 +0.0856173 dB
+PASS: 20 saved validation score checks, regional code hashes and disclosed test duplicate pairs
+PASS: three report figures, 10-file Overleaf ZIP and 68 local documentation links
+LIMIT: saved-record audit only; full test float arrays were not transferred or rescored. Human writing/contribution review and submission confirmation remain.
+[exit 0 · 0.1s]
